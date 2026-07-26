@@ -31,12 +31,10 @@ SRC = ROOT / "_source"
 SITE = {
     "title": "The Coordination Commons",
     "tagline": "A DRep reference space",
-    "author": "Jeremy Bolander",
+    "author": "Styg",
     "handle": "styg50",
-    # Set this to the published origin before first deploy. Every "cite this
-    # page" permalink is built from it.
-    "base": "https://styg50.github.io/coordination-commons",
-    "drep_id": "",  # fill in after re-registration
+    "base": "https://github.com/styg-DRep/coordination-commons.git",
+    "drep_id": "drep1yfaq8dsam7nusdccey2x2p684f6ulhr42pv24tslv0terqs3nq50q",  
 }
 
 FUNNELS = [
