@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decrease Treasury Tax from 20% to 10% · The Coordination Commons</title>
+<meta name="description" content="A parameter vote that is really a modelling-standards argument: what evidence a change of this size owes, and why continuous iterative change beats a pendulum swing.">
+<meta name="author" content="Jeremy Bolander">
+<meta property="og:title" content="Decrease Treasury Tax from 20% to 10%">
+<meta property="og:description" content="A parameter vote that is really a modelling-standards argument: what evidence a change of this size owes, and why continuous iterative change beats a pendulum swing.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coordination Commons">
+<link rel="canonical" href="https://styg50.github.io/coordination-commons/rationales/treasury-tax-tau/">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="../../">The Coordination Commons <span>· a DRep reference</span></a>
+    <nav aria-label="Primary"><a href="../../foundations/">Foundations</a><a href="../../seam/" class="is-seam">The Seam</a><a href="../../instruments/">Instruments</a><a href="../../rationales/" aria-current="page">Rationales</a><a href="../../notes/">Notes</a><a href="../../index-of-work/">All work</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="shell">
+  <div class="page-head">
+    <div class="headwrap">
+      <p class="eyebrow"><a href="../../">Space</a><span class="sep">›</span><a href="../../rationales/">Rationales</a><span class="sep">›</span>Voting rationale · Protocol Parameter Change</p>
+      <h1>Decrease Treasury Tax from 20% to 10%</h1>
+      <p class="standfirst">On the history of tau, the evidentiary standard a parameter model has to meet, and why the maximum possible change is the wrong first move</p>
+      <ul class="metastrip"><li><b>vote</b> NO</li><li><b>action</b> Protocol Parameter Change (economic)</li><li><b>submitted</b> 13 February 2025 (Epoch 539)</li></ul>
+    </div>
+  </div>
+  <div class="doc">
+    <aside class="rail">
+  <h2>On this page</h2>
+  <nav aria-label="On this page"><ol><li><a href="#1.0-introduction">1.0 Introduction</a></li><li class="lvl3"><a href="#1.1-summary">1.1 Summary</a></li><li class="lvl3"><a href="#1.2-description-of-governance-action">1.2 Description of Governance Action</a></li><li><a href="#2.0-discussion">2.0 Discussion</a></li><li class="lvl3"><a href="#2.1-method">2.1 Method</a></li><li class="lvl3"><a href="#2.2-history-of-tau-(τ)">2.2 History of tau (τ)</a></li><li class="lvl3"><a href="#2.3-understanding-tau-(τ)-and-other-parameters">2.3 Understanding tau (τ) and other Parameters</a></li><li class="lvl3"><a href="#2.4-proposal-evaluation">2.4 Proposal Evaluation</a></li><li><a href="#3.0-conclusion">3.0 Conclusion</a></li><li class="lvl3"><a href="#4.0-references/sources">4.0 References/Sources</a></li><li class="lvl3"><a href="#iterating-for-growth-with-iohk-research">Iterating for growth with IOHK research</a></li><li class="lvl3"><a href="#engineering-design-specification-for-delegation-and-incentives-in-cardanoshelley">Engineering Design Specification for Delegation and Incentives in Cardano–Shelley</a></li><li class="lvl3"><a href="#cip-1694">CIP-1694</a></li><li class="lvl3"><a href="#double-treasury-taxation-of-40%-and-possible-workarounds">Double treasury taxation of 40% and possible workarounds</a></li><li class="lvl3"><a href="#cardano-economic-parameters">Cardano Economic Parameters</a></li><li class="lvl3"><a href="#cip-treasury-fraction-on-actual-distributed-rewards">CIP-Treasury fraction on actual distributed rewards</a></li><li class="lvl3"><a href="#adjusting-the-rate-of-tau-(t)-(pcp_treasurytax-tau-parameter_earncoinpool)">Adjusting the Rate of Tau (t)   (PCP_TreasuryTax-tau-parameter_EarnCoinPool)</a></li><li class="lvl3"><a href="#pcp-forum-post">PCP Forum Post</a></li><li class="lvl3"><a href="#cf-java-rewards-calculation">cf-java-rewards-calculation</a></li><li class="lvl3"><a href="#releasing-an-open-source-rewards-calculation">Releasing an open source rewards calculation</a></li><li class="lvl3"><a href="#/report-latest/treasury_calculation">/report-latest/treasury_calculation</a></li><li class="lvl3"><a href="#plutus-v3-on-testnet">Plutus V3 on TestNet</a></li></ol></nav>
+  <h2>In Rationales</h2>
+  <nav><ol><li><a href="../../rationales/">← All rationales</a></li></ol></nav>
+</aside>
+
+    <article class="body">
+      <section class="panel" id="the-vote">
+  <h3>The vote</h3>
+  <p><span class="verdict v-no">NO</span> on this governance action.</p>
+  <ul class="lineage">
+    <li><span class="rel">GAID</span><span style="font-family:var(--mono);font-size:.82rem;word-break:break-all">gov_action1js2s9v92zpxg2rge0y3jt9zy626he2m67x9kx9phw4r942kvsn6sqfym0d7</span></li>
+    <li><span class="rel">Action type</span><span>Protocol Parameter Change (economic)</span></li>
+    <li><span class="rel">Submitted</span><span>13 February 2025 (Epoch 539)</span></li>
+    <li><span class="rel">Expires</span><span>15 March 2025 (Epoch 546)</span></li>
+  </ul>
+</section>
+
+      
+      <h2 id="1.0-introduction">1.0 Introduction<a class="anchor" href="#1.0-introduction" aria-label="Link to this section">§</a></h2>
+<h3 id="1.1-summary">1.1 Summary<a class="anchor" href="#1.1-summary" aria-label="Link to this section">§</a></h3>
+<p>We are voting <strong>NO</strong> on this governance action to reduce the “treasury cut” (<em>tau or</em> <br />
+<em>τ)</em> from 20% to 10%.</p>
+<ul>
+<li>History of the  <em>tau</em> (<em>τ)</em> parameter has not been fully represented here  </li>
+<li>Claims of benefit have not been treated with sufficient evidence or full examinations of context  </li>
+<li>The “Economic analysis” of this proposal falls short of our expectations for modeling of parameters  </li>
+<li>The change suggested does not align with our principles regarding navigating complexity, where change should be continuous and iterative, rather than single large movements  </li>
+<li>We include here recommendations for improvement, as well as a basic framework for evaluating the models we develop and use to understand things like protocol parameters</li>
+</ul>
+<h3 id="1.2-description-of-governance-action">1.2 Description of Governance Action<a class="anchor" href="#1.2-description-of-governance-action" aria-label="Link to this section">§</a></h3>
+<p>Protocol Parameter Changes are governance actions that implement any change to one or more updatable protocol parameters, excluding changes to major protocol versions (&lsquo;hard forks&rsquo;).  They are divided up into four categories, however they are not exclusive of each other and a governance action may contain more than one protocol parameter update, as they often are required to be synchronized when changed.</p>
+<p>The parameter under consideration (<em>tau or τ)</em> belongs to the <strong>economic</strong> category and is ratified by the <strong>Constitutional Committee</strong> (passed) and the <strong>Dreps</strong> (67% threshold).  <strong>SPOs</strong> do not vote on this governance action.  This parameter is referred to in several ways, including as <em>tau</em> (<em>τ)</em> in the Shelley specification and Genesis file, as “treasury expansion” in govtool documentation, as `treasuryCut` in CLI documentation, and as `treasury_growth_rate` in DBsync documentation.  We will be referring to it as either `treasuryCut` or <em>tau</em> (<em>τ)</em> depending on context.</p>
+<h2 id="2.0-discussion">2.0 Discussion<a class="anchor" href="#2.0-discussion" aria-label="Link to this section">§</a></h2>
+<h3 id="2.1-method">2.1 Method<a class="anchor" href="#2.1-method" aria-label="Link to this section">§</a></h3>
+<p>We will first seek to understand the context of this governance action by investigating two elements:</p>
+<ul>
+<li>The history of the <em>tau</em> (<em>τ)</em> parameter, how it was initially set, and any changes or attempted changes that have been made to it  </li>
+<li>The wider understanding that is available regarding the real world performance of <em>tau</em> (<em>τ)</em>, as well as its interaction with other economic parameters</li>
+</ul>
+<p>Based on the context we establish, we will then proceed to evaluate the governance action for several formal qualities and in line with several fundamental principles, including:</p>
+<ul>
+<li>Does the proposal accurately describe known facts about the parameter?  </li>
+<li>Does the proposal provide robust evidence for any claims it makes?  </li>
+<li>Is the approach to evaluating the potential of the claim rigorous?  </li>
+<li>StakePool rewards, an area directly affected by changes to <em>tau</em> (<em>τ)</em>, are a critical decentralization/security mechanism for Cardano, and we are biased towards the operational sustainability of those rewards when possible.  </li>
+<li>Promoting change in complex environments should be done in an iterative fashion with adequate resources committed to monitoring and evaluation, and clear protocols for when to rollback changes that may be causing unexpected or deleterious behavior.</li>
+</ul>
+<h3 id="2.2-history-of-tau-(τ)">2.2 History of <em>tau</em> (<em>τ)</em><a class="anchor" href="#2.2-history-of-tau-(τ)" aria-label="Link to this section">§</a></h3>
+<p><em>Tau</em> (<em>τ)</em>  was introduced in design specifications of the Shelley era, where it was described as a necessary preset parameter to begin development of the Cardano Treasury as described in the Cardano Roadmap.  Despite not having a full treasury <em>(T)</em> system at the time, and still needing more research in order to implement one, funds would still be collected into a “<em>T</em> pot”, according to the setting of the <em>tau</em> (<em>τ)</em> parameter.</p>
+<p>In June of 2020, <a href="#iterating-for-growth-with-iohk-research">in a blog post</a>, Lars Brunjes described the initial setting of the <em>tau</em> (<em>τ)</em> parameter.  Understanding that the relationships of unclaimed rewards, pledge and the monetary expansion parameters were deeply interconnected, along with assumptions about ADA adoption and target “half-life” parameters for the reserve, a steady rate of 5% was suggested for <em>tau</em> (<em>τ)</em> with unclaimed rewards going to the treasury.  Importantly, this forecast estimated that in 5 years, the treasury could be expected to harbor 2,900,000,000 ADA, and this was considered a strong case for both the incentivization of early node operators and attractive resources for future stakeholders, the key balance always being struck in the incentives mechanism.</p>
+<p>The Shelley design specifications <a href="#4.0-references/sources">(SL-D1 v.1.21, 2020/07/23)</a> include Section 5, where the modeling and design of rewards/incentives parameters is described in detail.  Here we see the complex interactions across many protocol parameters and other assumptions (including <em>k, F(avg tx fees), e(exchange rate), c(exp operational costs),</em> etc.)  <em>Tau</em> (<em>τ)</em>  itself is described in Section 5.10 as a “policy decision” with strong influence from assumptions in the <em>rho (ρ),</em> or monetary expansion, parameter.  The description of <em>tau</em> (<em>τ)</em> there is that it would be set to 20% rather than 5%, with unclaimed rewards returning to the reserve.<br />
+In October of 2020, <a href="#double-treasury-taxation-of-40%-and-possible-workarounds">in a Cardano Forum post</a>, we find some insight into why the rate was changed.  Discovery of a “real tax rate” higher even than the 20% <em>tau</em> (<em>τ)</em> due to a form of “double taxation” led to a discussion around whether this “real tax rate” phenomenon was known or even intended (this “real tax rate” is describe in the forum post as 40%, however we now know it to be far more variable, especially under specific circumstances).  In comments from Lars Brunjes and Cardano Foundation representatives, several points were clarified:</p>
+<ul>
+<li>Design teams were aware of the phenomenon of a variable tax rate, due in large part to ADA participation rates in mainnet and unclaimed rewards  </li>
+<li>The original 5% rate with unclaimed rewards (variable tax rate) going to the treasury was expected to create a real tax rate of approximately 20%, but as the Shelley design specification was developed, further simulations were completed, indicating that this formula would create real tax rates in excess of 55%  </li>
+<li>The change to 20% with unclaimed rewards going to the reserve (where they would be distributed again, leading to what was being called “double taxation” in the post, something more accurately described as “additional variable rate”.  </li>
+<li>The expectation of this new formula would be a more consistent <em>tau</em> (<em>τ)</em>  rate of taxation, with less monetary emission going to the treasury.  Their simulations suggested a rate between 30% to 35% (<a href="#cardano-economic-parameters">recent research</a> supports the accuracy, with consistent rates around 33%)</li>
+</ul>
+<p>It is worth noting that in that discussion, there was positive reception by the design team for a reformulation where <em>tau</em> (<em>τ)</em> was applied only to <strong>paid</strong> rewards, rather than the whole reward pot.  This would result in a more transparent mechanism (though actual rates are unclear), however this was not investigated further, to our knowledge.</p>
+<p>The discussion in the forum post led to the submission of a <a href="#pcp-forum-post">CIP proposal</a> to further investigate the changing of the  <em>tau</em> (<em>τ)</em> parameter.  CIP editors moved the discussion to research, however the writer of the CIP decided to close the pull request based on low community engagement and feedback.</p>
+<p>In October of 2023, a <a href="#adjusting-the-rate-of-tau-(t)-(pcp_treasurytax-tau-parameter_earncoinpool)">PCP</a> (Parameter Change Proposal) for <em>tau</em> (<em>τ)</em> was introduced on the <a href="#pcp-forum-post">Cardano Forum</a>, and subsequently submitted for consideration by the Protocol Parameter Committee.  During the 5 months that the PCP was active, it was not pulled up to the main tri-weekly agenda of the Committee.  As of the March 2024 Committee meeting, there was no continuing effort from the community to refresh the PCP.  Of note for this PCP, was that solutions under consideration included setting the  <em>tau</em> (<em>τ)</em> rate as low as 0.03 in order to obtain a real rate closer to 5%, along with critical questions about factors that interacted with  <em>tau</em> (<em>τ)</em> and investigating the frequency of adjusting  <em>tau</em> (<em>τ).</em>  What was not included was any consideration of adjusting the target of  <em>tau</em> (<em>τ)</em> from the reward pot to the paid subset of the reward pot.  It is not clear that this is an infeasible approach, and should probably be discussed more broadly.</p>
+<p>It is worth asking ourselves why these attempts to change the parameter were unsuccessful.  We would surmise, with some evidence, that (1) community engagement channels are not particularly strong for technical and economic parameters, and (2) that our ability to envision, as a community and as designers of protocol parameters, a clear model of how these complex parameters interact with each other and with exogenous factors such as cost to operate a node, regional exchange rates, etc., is not well supported yet.  We will touch on these challenges in the next section.</p>
+<h3 id="2.3-understanding-tau-(τ)-and-other-parameters">2.3 Understanding <em>tau</em> (<em>τ)</em> and other Parameters<a class="anchor" href="#2.3-understanding-tau-(τ)-and-other-parameters" aria-label="Link to this section">§</a></h3>
+<p>The historical interrogation of <em>tau</em> (<em>τ)</em> highlights for us a critical aspect of not only <em>tau</em> (<em>τ)</em> but of all of our parameters, which is that they describe a complex topography of many factors, all interacting in unexpected ways.  We believe that in order to make good decisions regarding parameters in the future, we must work from robust, open source models and the data they create.  There is excellent work being done in the ecosystem, including data visibility (research and discussion around data dashboards), <a href="#cf-java-rewards-calculation">open source calculation models</a> and deep dives into protocol parameter interactions (<a href="#cardano-economic-parameters">this report</a> from Massimo Morini et al is both timely and timeless).  In both cases, discussion of real parameter modeling is either implicit, or listed explicitly as a need of the ecosystem, and we couldn’t agree more.</p>
+<p>To that end, we include here an evaluative framework for what constitutes a “robust” model or approach to modeling.  This is relevant to this governance action in two ways:</p>
+<ul>
+<li>Short term, we can ask “Does this governance proposal support, imply or use any of these concepts?”  </li>
+<li>Long term, as models are created and iterated, it gives us a framework for assessing whether they are adequate, robust and effective over time, by allowing us to assess the models for gaps or oversights when suggesting parameter changes</li>
+</ul>
+<h4 id="2.3.1-basic-evaluation-framework-for-modeling-parameters">2.3.1 Basic Evaluation Framework for modeling Parameters</h4>
+<p>Models are like thought experiments, but with code. Something in between a proposed specification and a final implementation. This is great if you want to test an idea before building it, or want to test variations on an idea to see which might be best.</p>
+<p>When creating a model, the point is to help you explore an idea, but also to help others do the same. As such, we must look for the following features and concepts:</p>
+<h5><strong>Legibility</strong></h5>
+<p>A model is a living document. It conveys information, but you can also modify and interact with it to learn new information. The results of running a model are only a small part of its value. Most of the value comes from people&rsquo;s ability to explore and modify the parameters and assumptions within the model to better understand something. This requires your model to be legible. Code syntax and guidance on best practices are areas to evolve and improve in this area.</p>
+<ul>
+<li>Is your model structured so that it&rsquo;s easy to interact with?  </li>
+<li>Could people easily modify it to test your assumptions and their own?</li>
+</ul>
+<h5><strong>Assumptions</strong></h5>
+<p>Models make assumptions about the world in order to focus on the thing that is being modeled. The model is a representation of a thing, not the thing itself. Just like with a map, it&rsquo;s important to specify what you included, what you left out, and why. It&rsquo;s also important to specify what you&rsquo;re assuming to be true and/or external states/environments that you assume the model is operating within.</p>
+<ul>
+<li>What does your model assume or require to be true?  </li>
+<li>Are these assumptions stated explicitly?</li>
+</ul>
+<h5><strong>Ergodicity</strong></h5>
+<p><a href="https://en.wikipedia.org/wiki/Ergodicity">Visit all parts of the space that the system moves in</a>, in a uniform and random sense. A sufficiently large collection of random samples from a process can represent the average statistical properties of the entire process. Then you understand the full range of the state space and what states are more likely with what parameters.</p>
+<h5><strong>Specificity</strong></h5>
+<p>Specificity is the opposite of assumptions. It&rsquo;s what the model is exploring in detail.</p>
+<ul>
+<li>What question is the model exploring?  </li>
+<li>What did you choose to be specific about in relation to this question?  </li>
+<li>Is your model specific enough that it defines the problem and the potential solution?</li>
+</ul>
+<h5><strong>A/B Testing</strong></h5>
+<p>A/B testing allows you to test multiple variations of a thing. This is very important if you need to see how a proposed solution might behave under a wide range of assumptions. Be aware that A then B is not the same as testing A and B simultaneously. Statefulness and ordering is important. The latter compares A and B against the same data and this is what we&rsquo;re talking about when we say A/B testing.</p>
+<ul>
+<li>Test the same idea under multiple contexts.  </li>
+<li>Test multiple ideas within the same context.</li>
+</ul>
+<h5><strong>Data Generation</strong></h5>
+<p>Models also allow you to generate new data. This can be useful if you want to test alternate scenarios and explore the state space more than what would be possible with historical data.<br />
+If your assumptions are made explicit then you can also test your model in different contexts. That way you can have a better idea of under what macro conditions your assumptions might hold.</p>
+<h5><strong>Reflexivity</strong></h5>
+<p>Reflexivity happens when multiple variables within the model feed into each other. This can create exponential amplification or suppression of metrics. This throws off wild data that makes it difficult to gain any understanding from the model. If there&rsquo;s any reflexivity involved make sure it&rsquo;s there for a very good reason and you understand exactly how it works.</p>
+<ul>
+<li>Are there any portions of your model that are self referential or that refer to each other in a loop?</li>
+</ul>
+<h3 id="2.4-proposal-evaluation">2.4 Proposal Evaluation<a class="anchor" href="#2.4-proposal-evaluation" aria-label="Link to this section">§</a></h3>
+<p>We will first examine some formal qualities of the proposal, and then move on to interrogating the proposal for specific fundamental principles.</p>
+<h5><strong>Formal qualities</strong></h5>
+<p>We are asking first how well the facts of the proposal reflect our own understanding and investigation of the facts.</p>
+<p>Our first conclusion is that this proposal consistently misrepresents certain elements.  It repeatedly refers to <em>tau</em> (<em>τ)</em> as being set “arbitrarily” during Shelley genesis, however our investigation indicates that not only was it set in a methodical way, but that it was quite deliberately set in a systematic way as well, with ongoing simulation and analysis resulting in a very close approximation of the expected “real tax rate” (33%).  Further, the proposal suggests that <em>tau</em> (<em>τ)</em> has never been reassessed.  Again our investigation disputes this, as <em>tau</em> (<em>τ)</em> was undergoing a process of reassessment even as it was being implemented, and then was revisited twice with community driven discussions, CIP proposals and PCP requests.  We would agree that the parameter has not been given <em>enough</em> attention, and that this addition to the discussion is warranted.</p>
+<p>Also in regards to the presentation of facts and context, Plutus V3 is raised in an odd way.  For clarity, this section could be removed, as the only overlap to be taken into consideration is that “parameters can be changed.”  We believe there is adequate awareness of this context, and that introducing the concept of PlutusV3 adds an inauthentic “name-dropping” quality to the presentation of the idea.  PlutusV3 is a legitimate and successful change adaptation to the protocol, but has almost no relevance to the idea being suggested here.  Conflating the PlutusV3 scoping (referred to as “structured approach” in the proposal) also misrepresents the vast difference between this proposal and that process.  There is a somewhat structured approach to this proposal, but nowhere near the technical and developmental <a href="#plutus-v3-on-testnet">scoping that went into PlutusV3</a> and its long implementation.</p>
+<p>The included mathematical representations are also not entirely accurate, reflecting direct correspondence of <em>tau</em> (<em>τ)</em> to real tax rate, but as we have seen there are complex interactions that drive real rates beyond the basic calculations of <em>tau</em> (<em>τ).</em>  A very useful resource that can currently be used to calculate this basic real rate, is the open source calculator and its <a href="#/report-latest/treasury_calculation">reports</a> referenced earlier, and <a href="#releasing-an-open-source-rewards-calculation">explained here</a>.</p>
+<p>We also ask what evidence supports claims being made in the proposal.  In particular there are numerous claims about future states of the incentives mechanism, but there also claims made about fiscal governance as well.  </p>
+<p>There are some calculations that we believe do a decent job of describing two ways of viewing a principle that they repeat, namely that <em>price appreciation is the main driver of treasury sustainability</em>.  However, this is an area where A/B analysis described above is critical.  There is no evidence provided for why this principle might be true versus another principle like “<em>transaction growth drives treasury sustainability”</em> or even “<em>treasury spend security drives treasury sustainability”.</em>  Modeling these different contexts against similar data assumptions would provide evidence of pros and cons for each approach, and would likely indicate a navigable path if they proved to be polarities of each other (i.e. choice limiters akin to the blockchain trilemma).  In its current presentation, we do not find the claim of priority for a price appreciation approach, to the exclusion of other considerations, to be compelling.</p>
+<h5><strong>Principles guiding implementation</strong></h5>
+<p>We do find that any approach prioritizing security via the incentives mechanism would be welcome, however even then we would like to see more supporting evidence for how this parameter change leads to that.  The assumptions about more attractive stake participation driving security are non-obvious, in the sense that there are likely tradeoffs to be considered with the resource scarcity paradigm described, and how attractive use of the network will be for future stakeholders.  We are revisited here by the ad-hoc prioritization of price appreciation over usefulness or process, with no clear way to see the effects accumulating in each area.</p>
+<p>Regarding the resource scarcity paradigm, the proposal describes one view of this where treasury distributions are governed more effectively and efficiently.  However no evidence or research is supplied to back this claim.  Resource scarcity <em>may</em> drive innovation and efficiency, but it may also exacerbate competition over collaboration.  When it comes to Cardano public goods, such extant political conflict is expected to be managed by constitutionally derived institutions that channel conflict in productive ways.  Cardano has only begun to develop such institutions, and in our opinion has a ways to go before we can dependably navigate difficult political questions without doing damage.  The proposers are encouraged to investigate this resource scarcity dynamic and to present both the pros and cons.  Modeling these factors would also present a better decision making environment for economic parameters.</p>
+<p>The section of the proposal that discusses “continuity and prevention of disruptions” also needs to be developed more.  On the one hand it appears to be addressing the constitutionality of the governance action, which, while it may be a useful lens, does not seem to make sense in the overall structure of the proposal.  Giving constitutional alignment its own space makes sense, and clears this space for what may be the most important part of this proposal, given that we only have nascent capacity for real economic modeling:  monitoring and evaluation.</p>
+<p>In complex environments, even with modeling to aid our decision-making, a robust approach to monitoring and evaluation (M\&amp;E) is a must.  While it is appreciated that the proposers have highlighted some need for this, it is not acceptable that such mechanisms have not at least been given a framework.  An investigation into what existing institutions have the capacity to conduct such M\&amp;E (protocol parameter committee in Intersect?  Independent community oversight institutions?) as well as the resources needed for such oversight is needed here.  A clear description of M\&amp;E capacity is a requirement for ethical parameter change process, and that should be included for voters here.  </p>
+<p>Finally, in accordance with the principle of “do no harm”, we would like to see such complex parameter changes undertaken with an eye toward <em>continuous development</em> and <em>iterative change</em>.  In the absence of robust modeling, and during an era where we want to develop such modeling capacity without cutting corners due to urgency, adopting small, iterative changes with effective M\&amp;E procedures and clear pathways for reversibility is a critical development path.  For this proposal, the change from 20% to 10% can be characterized as not only a large change, but the maximum size change possible.  This type of pendulous approach to change is a disservice to stakeholders in the ecosystem who may not have, or understand, their immediate connections to a parameter like <em>tau</em> (<em>τ).</em>  </p>
+<p>This asymmetry of stakeholder effects highlights an area of improvement for this proposal, which would be to widen the aperture of scoping, and try to include more voices that represent different roles. There is a strong bias towards SPOs/stakers, but much less consideration from the POV of developers or future stakeholders, for whom the treasury is the more significant public good.  Nowhere is this highlighted more than in the assumption throughout that there is one primary to be considered, <em>price appreciation</em>.  When added to the resource scarcity paradigm that is presented as an opportunity, we believe it creates a large risk of short term thinking at a time when decisions need to be made about long term roadmaps and product discussions for Cardano.</p>
+<h2 id="3.0-conclusion">3.0 Conclusion<a class="anchor" href="#3.0-conclusion" aria-label="Link to this section">§</a></h2>
+<p>Ultimately, we find that the proposal is not widely representative of stakeholders in the ecosystem, does not provide enough evidence for the claims of sustainability and benefit that is expected to accrue to all stakeholders, and does not take a careful approach to navigating complex change.</p>
+<p>Having said that, it is the belief of this DRep that the most important discussions we can be having in Cardano governance right now relate to <em>Cardano Citizen Rights,</em> and evolving the Constitution over the short and intermediate term to enshrine those rights.  To that end, any discussions around monetary policy, and especially parameters related to the “taxes” being levied under this protocol are critical.</p>
+<p>In other words, anything even tangentially related to the “tax rates” of Cardano are likely to inform our understanding of our constitutional protections in this ecosystem.  So we are deeply appreciative, and not at all surprised, that  <em>tau</em> (<em>τ)</em> has made an early appearance in our governance processes, and we look forward to evolving the discussion and ultimately the understanding around this key parameter.</p>
+<p>To that end, there are several suggestions that can be made to bring us closer to a state where  <em>tau</em> (<em>τ)</em> changes in dynamical and useful ways, securing to us the most legitimate form of our constitutional rights:</p>
+<ul>
+<li>Include as complete of a history as possible for this or any parameter that we seek to change  </li>
+<li>Prioritize the development of our capacity to model complex parameters alongside exogenous data and scenarios  </li>
+<li>Prioritize the development of our capacity for monitoring and evaluation of change and attempted change in the ecosystem  </li>
+<li>When uncertainty to complexity prevent us from seeing more than one change request into our features, adopt a stance of continuous improvement and iterative change  </li>
+<li>Always provide a description of how and under what circumstances a reversal of the proposed policy, if implemented, would be prudent  </li>
+</ul>
+<p>I look forward to the evolution of this parameter proposal, and to enjoying a legitimate <em>tau</em> (<em>τ)</em> parameter that adapts to and serves the ecosystem at its highest potential.</p>
+<p>DRep ID:  drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw<br />
+DRep Profile (tempo): <a href="https://tempo.vote/drep-profile?dRepId=drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw">https://tempo.vote/drep-profile?dRepId=drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw</a></p>
+<p>Stay in touch!<br />
+ReachYourPeople: <a href="https://www.ryp.io/projects/45">https://www.ryp.io/projects/45</a><br />
+X:  <a href="https://x.com/styg50">https://x.com/styg50</a></p>
+<h3 id="4.0-references/sources">4.0 References/Sources<a class="anchor" href="#4.0-references/sources" aria-label="Link to this section">§</a></h3>
+<ul>
+<li>
+<h3 id="iterating-for-growth-with-iohk-research"><a href="https://iohk.io/en/blog/posts/2020/06/25/iterating-for-growth-with-iohk/">Iterating for growth with IOHK research</a><a class="anchor" href="#iterating-for-growth-with-iohk-research" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="engineering-design-specification-for-delegation-and-incentives-in-cardanoshelley"><a href="https://github.com/input-output-hk/cardano-ledger/releases/latest/download/shelley-delegation.pdf">Engineering Design Specification for Delegation and Incentives in Cardano–Shelley</a><a class="anchor" href="#engineering-design-specification-for-delegation-and-incentives-in-cardanoshelley" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="cip-1694"><a href="https://www.1694.io/en">CIP-1694</a><a class="anchor" href="#cip-1694" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="double-treasury-taxation-of-40%-and-possible-workarounds"><a href="https://forum.cardano.org/t/double-treasury-taxation-of-40-and-possible-workarounds/41461">Double treasury taxation of 40% and possible workarounds</a><a class="anchor" href="#double-treasury-taxation-of-40%-and-possible-workarounds" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="cardano-economic-parameters"><a href="https://ucarecdn.com/cb24f376-d3bd-40c3-9c29-04573a644c8a/">Cardano Economic Parameters</a><a class="anchor" href="#cardano-economic-parameters" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="cip-treasury-fraction-on-actual-distributed-rewards"><a href="https://github.com/cardano-foundation/CIPs/pull/35">CIP-Treasury fraction on actual distributed rewards</a><a class="anchor" href="#cip-treasury-fraction-on-actual-distributed-rewards" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="adjusting-the-rate-of-tau-(t)-(pcp_treasurytax-tau-parameter_earncoinpool)"><a href="https://docs.google.com/document/d/1j7tE7GOD6W89A2SDJS0w3mS5s767zL8AyZIj5jPkuJo/edit?tab=t.0#heading=h.20o60lwg9tyl">Adjusting the Rate of Tau (t)</a>   <a href="https://docs.google.com/document/d/1j7tE7GOD6W89A2SDJS0w3mS5s767zL8AyZIj5jPkuJo/edit?tab=t.0#heading=h.20o60lwg9tyl">(PCP_TreasuryTax-tau-parameter_EarnCoinPool)</a><a class="anchor" href="#adjusting-the-rate-of-tau-(t)-(pcp_treasurytax-tau-parameter_earncoinpool)" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="pcp-forum-post"><a href="https://forum.cardano.org/t/pcp-treasurytax-tau-parameter-earncoinpool/123245">PCP Forum Post</a><a class="anchor" href="#pcp-forum-post" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="cf-java-rewards-calculation"><a href="https://github.com/cardano-foundation/cf-java-rewards-calculation">cf-java-rewards-calculation</a><a class="anchor" href="#cf-java-rewards-calculation" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="releasing-an-open-source-rewards-calculation"><a href="https://www.cardanofoundation.org/blog/releasing-an-open-source-rewards-calculation">Releasing an open source rewards calculation</a><a class="anchor" href="#releasing-an-open-source-rewards-calculation" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="/report-latest/treasury_calculation"><a href="https://cardano-foundation.github.io/cf-java-rewards-calculation/report-latest/treasury_calculation.html">/report-latest/treasury_calculation</a><a class="anchor" href="#/report-latest/treasury_calculation" aria-label="Link to this section">§</a></h3>
+</li>
+<li>
+<h3 id="plutus-v3-on-testnet"><a href="https://medium.com/tap-in-with-taptools/plutus-v3-on-testnet-5130d1e4838a">Plutus V3 on TestNet</a><a class="anchor" href="#plutus-v3-on-testnet" aria-label="Link to this section">§</a></h3>
+</li>
+</ul>
+<p>###</p>
+      
+      
+      <section class="cite panel" id="cite">
+  <h3>Cite this page</h3>
+  <p>This URL is stable. Link it directly from a voting rationale, a forum post, or a proposal comment.</p>
+  <p class="perma"><span>https://styg50.github.io/coordination-commons/rationales/treasury-tax-tau/</span>
+     <button class="copy" type="button" data-copy="https://styg50.github.io/coordination-commons/rationales/treasury-tax-tau/">Copy link</button></p>
+  <p style="margin-bottom:0"><small>Jeremy Bolander, “Decrease Treasury Tax from 20% to 10%,” <em>The Coordination Commons</em>. GAID gov_action1js2s9v92zpxg2rge0y3jt9zy626he2m67x9kx9phw4r942kvsn6sqfym0d7.</small></p>
+</section>
+
+      <div class="updown pair"><a class="prev" href="../../rationales/constitution-v1/"><span class="lbl">Previous in Rationales</span><span class="ttl">Cardano Constitution to Replace the Interim Constitution</span></a><a class="next" href="../../rationales/constitution-v2-4/"><span class="lbl">Next in Rationales</span><span class="ttl">Cardano Constitution v2.4</span></a></div>
+    </article>
+  </div>
+</div>
+
+</main>
+<footer class="site-foot">
+  <div class="shell">
+    <div class="cols">
+      <div>
+        <h4>The space</h4>
+        <p>The public reference behind the voting rationales of <strong>Jeremy Bolander</strong>,
+        a Cardano DRep. Everything asserted in a vote of mine is derived somewhere on these pages, and
+        every page is permanently addressable so a disagreement can start where it actually starts.</p>
+      </div>
+      <div><h4>Funnels</h4><ul><li><a href="../../foundations/">Foundations</a></li><li><a href="../../seam/">The Seam</a></li><li><a href="../../instruments/">Instruments</a></li><li><a href="../../rationales/">Rationales</a></li><li><a href="../../notes/">Notes</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul>
+        <li><a href="../../index-of-work/">Index of all work</a></li>
+        <li><a href="../../about/">About &amp; how to cite</a></li>
+        <li><a href="https://x.com/styg50" rel="me noopener">@styg50</a></li>
+        <li><a href="https://gov.tools" rel="noopener">GovTool</a></li>
+      </ul></div>
+    </div>
+    <p class="fine">These pages re-version. Where a page and the corpus beneath it disagree, the corpus
+    governs and the page is out of date. Rights here are argued to be discovered rather than decreed —
+    which means the argument is open to being shown wrong, and the four falsification conditions are
+    published on <a href="../../foundations/what-cardano-is/#9-what-would-change-my-mind">the stance page</a>.</p>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

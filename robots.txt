@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://styg50.github.io/coordination-commons/sitemap.xml

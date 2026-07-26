@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposal Intake and Sort · The Coordination Commons</title>
+<meta name="description" content="Three axes decide how much analysis a governance action earns: wall-versus-knob, exit-remediability, and epistemic-dependency depth. On-chain action type is not one of them.">
+<meta name="author" content="Jeremy Bolander">
+<meta property="og:title" content="Proposal Intake and Sort">
+<meta property="og:description" content="Three axes decide how much analysis a governance action earns: wall-versus-knob, exit-remediability, and epistemic-dependency depth. On-chain action type is not one of them.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coordination Commons">
+<link rel="canonical" href="https://styg50.github.io/coordination-commons/instruments/intake-and-sort/">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="../../">The Coordination Commons <span>· a DRep reference</span></a>
+    <nav aria-label="Primary"><a href="../../foundations/">Foundations</a><a href="../../seam/" class="is-seam">The Seam</a><a href="../../instruments/" aria-current="page">Instruments</a><a href="../../rationales/">Rationales</a><a href="../../notes/">Notes</a><a href="../../index-of-work/">All work</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="shell">
+  <div class="page-head">
+    <div class="headwrap">
+      <p class="eyebrow"><a href="../../">Space</a><span class="sep">›</span><a href="../../instruments/">Instruments</a><span class="sep">›</span>Instrument · Layer 3 · The ingestion layer</p>
+      <h1>Proposal Intake and Sort</h1>
+      <p class="standfirst">The three axes that decide how much analysis a governance action earns — and the intake form that reads them</p>
+      <ul class="metastrip"><li><b>type</b> instrument</li><li><b>layer</b> 3</li><li><b>status</b> v1.0 (settled for use; re-version at seam review)</li></ul>
+    </div>
+  </div>
+  <div class="doc">
+    <aside class="rail">
+  <h2>On this page</h2>
+  <nav aria-label="On this page"><ol><li><a href="#0-what-this-instrument-does-and-does-not-do">0. What this instrument does and does not do</a></li><li><a href="#1-why-type-is-not-the-sort-key">1. Why type is not the sort key</a></li><li><a href="#2-axis-1-wall-knob-or-wall-building">2. Axis 1 — Wall, knob, or wall-building</a></li><li><a href="#3-axis-2-exit-remediability">3. Axis 2 — Exit-remediability</a></li><li><a href="#4-axis-3-epistemic-dependency-depth">4. Axis 3 — Epistemic-dependency depth</a></li><li><a href="#5-the-routing-rule">5. The routing rule</a></li><li><a href="#6-the-intake-form">6. The intake form</a></li><li class="lvl3"><a href="#0-identification-metadata-not-sort-key">§0 — Identification (metadata, not sort key)</a></li><li class="lvl3"><a href="#1-the-good">§1 — The good</a></li><li class="lvl3"><a href="#2-the-constraint-landscape-axis-1">§2 — The constraint landscape (Axis 1)</a></li><li class="lvl3"><a href="#3-reversal-axis-2">§3 — Reversal (Axis 2)</a></li><li class="lvl3"><a href="#4-dependency-axis-3">§4 — Dependency (Axis 3)</a></li><li class="lvl3"><a href="#5-the-reflexive-check-mandatory-at-d3-discretionary-elsewhere">§5 — The reflexive check (mandatory at D3, discretionary elsewhere)</a></li><li class="lvl3"><a href="#6-sort-output">§6 — Sort output</a></li><li><a href="#7-reading-a-non-answer">7. Reading a non-answer</a></li><li><a href="#8-interaction-with-standing-policies">8. Interaction with standing policies</a></li><li><a href="#9-how-to-use-this">9. How to use this</a></li><li><a href="#appendix-a-calibration-three-open-source-infrastructure-archetypes">Appendix A — Calibration: three open-source infrastructure archetypes</a></li></ol></nav>
+  <h2>In Instruments</h2>
+  <nav><ol><li><a href="../../instruments/">← All instruments</a></li></ol></nav>
+</aside>
+
+    <article class="body">
+      
+      
+      <p><em>Every governance action gets read. Not every governance action earns the same reading. This document fixes how that decision is made, so that it is made the same way twice and can be audited by anyone.</em></p>
+<hr />
+<h2 id="0-what-this-instrument-does-and-does-not-do">0. What this instrument does and does not do<a class="anchor" href="#0-what-this-instrument-does-and-does-not-do" aria-label="Link to this section">§</a></h2>
+<p>This is the ingestion layer. It takes a governance action and returns <strong>a lane</strong> — how much analysis the action earns, and which instruments run on it.</p>
+<p>It does <strong>not</strong> return a vote. It does not score, rank, or recommend. The distinction is load-bearing and is imported directly from the governing register principle: <em>persuade about the problem; instrument the reading.</em> An intake form that delivered verdicts would be a persuasion funnel wearing an instrument&rsquo;s clothes, and would fail the same test this framework applies to everything else.</p>
+<p>It is published for two reasons. First, transparency: a methodology that cannot be inspected cannot be argued with, and the argument is the work. Second, co-learning: two of the seven questions below are questions no proposal template currently asks, and the most useful thing this artifact can do is make them askable.</p>
+<p><strong>A note on register, held throughout.</strong> A low sort result is not a low-quality proposal. A high sort result is not an accusation. The sort measures <em>how much can go wrong that would not announce itself</em> — nothing more. Most good proposals sort shallow. That is what shallow means.</p>
+<hr />
+<h2 id="1-why-type-is-not-the-sort-key">1. Why type is not the sort key<a class="anchor" href="#1-why-type-is-not-the-sort-key" aria-label="Link to this section">§</a></h2>
+<p>Cardano defines seven on-chain action types. They are the right unit for the ledger and the wrong unit for analysis, because they do not track anything the derivation cares about. Two treasury withdrawals with identical sector tags can sit three tiers of scrutiny apart; a parameter change and a treasury withdrawal can sit in the same cell.</p>
+<p>Sector labels fail the same way, and worse, because they invite batching by the recipient&rsquo;s tax status rather than by the structure of the claim.</p>
+<p>The sort therefore runs on three axes drawn from the derivation. Action type and sector are retained as <strong>metadata</strong>, not as sort keys.</p>
+<hr />
+<h2 id="2-axis-1-wall-knob-or-wall-building">2. Axis 1 — Wall, knob, or wall-building<a class="anchor" href="#2-axis-1-wall-knob-or-wall-building" aria-label="Link to this section">§</a></h2>
+<p><strong>The distinction.</strong> A <em>wall</em> is a structural constraint whose function is to make a class of outcome unreachable by ordinary governance count. A <em>knob</em> is a setting whose function is to be tuned within a range. A wall is not a knob set very tight; it is a different kind of object, and the difference is what the two remaining axes explain.</p>
+<p><strong>Three states, not two.</strong></p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Knob</strong></td>
+<td>Tunes a setting within the existing constraint structure. The structure itself is untouched.</td>
+</tr>
+<tr>
+<td><strong>Wall-touching</strong></td>
+<td>Approval requires a constraint currently treated as unreachable to be treated as tunable — <em>or</em> installs a structural default where a per-action decision stood.</td>
+</tr>
+<tr>
+<td><strong>Wall-building</strong></td>
+<td>Installs or hardens a structural constraint.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wall-building is not presumptively good.</strong> It faces the entrenchment test in the other direction: hardness should track inverse exit-remediability and epistemic-dependency depth, so a proposed wall must show that the failure it guards is genuinely irremediable or genuinely self-concealing. A wall installed around a remediable, visible failure is a knob welded shut, and a knob welded shut is a standing invitation to capture on the other side.</p>
+<p><strong>The fail-state is not touching a wall.</strong> Walls can be legitimately changed; that is what an amendment is for. The fail-state is touching a wall <strong>through an instrument that does not acknowledge it</strong> — an amendment wearing interpretation&rsquo;s clothes, or a structural default installed through an ordinary funding action.</p>
+<p><strong>Tells, in rough order of reliability:</strong></p>
+<ul>
+<li>The action changes <em>what range exists</em> rather than a setting within a range.</li>
+<li>The action is framed as clarification or interpretation but cannot proceed without a structural constraint being reinterpreted.</li>
+<li>The action converts a recurring decision into a default (renewal-by-default, standing authority, evergreen allocation). Defaults are walls in reverse: they make the <em>absence</em> of a decision determinative.</li>
+<li>The action admits a class of claim-holder whose entitlement does not reconstruct from the participant-rights framework and sits senior to the commons&rsquo; own discretion.</li>
+</ul>
+<p><strong>Burden.</strong> Where the wall-touching reading is contested, the burden sits on the party proposing that the constraint is tunable — not on the party asserting it is a wall.</p>
+<hr />
+<h2 id="3-axis-2-exit-remediability">3. Axis 2 — Exit-remediability<a class="anchor" href="#3-axis-2-exit-remediability" aria-label="Link to this section">§</a></h2>
+<p><strong>The definition.</strong> The cost and reachability of reversal if the action proves wrong. Not &ldquo;is it technically reversible&rdquo; but: <em>who</em> must act, through <em>what instrument</em>, against <em>whose</em> resistance, and does the passage of time raise or lower that cost.</p>
+<p><strong>Measure the failure mode, not the action.</strong> This is the single most common misreading and the one to guard hardest. An action can be trivially reversible while the failure it enables is not. A treasury deployment can be unwound on paper while the position it created cannot be exited in the crisis that would require exiting it. A delegation constraint can be restored after a vote it already moved. Ask what happens if this is <em>wrong</em>, then ask whether <em>that</em> can be undone.</p>
+<p><strong>Bands.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>R3 — reversal by inaction</strong></td>
+<td>The action lapses on its own terms. Not renewing is the default.</td>
+</tr>
+<tr>
+<td><strong>R2 — reversal by ordinary action</strong></td>
+<td>Reversible through normal process, against no interest the action itself created.</td>
+</tr>
+<tr>
+<td><strong>R1 — reversal by contested action</strong></td>
+<td>Reversal requires initiating against a party holding resources, standing, or dependency created by the original action.</td>
+</tr>
+<tr>
+<td><strong>R0 — irremediable</strong></td>
+<td>The failure mode cannot be undone after the fact regardless of subsequent action.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decay flag.</strong> Remediability is not static. Dependency-generating actions have <em>decaying</em> remediability: an action that reads R2 at enactment reads R1 at renewal and R0 at the third cycle, without any further decision being taken. Where decay is present, sort on the terminal band, not the opening one, and record the decay explicitly. This is the temporal signature of self-determination abrogation, and it is the reason no single snapshot of an action reads it correctly.</p>
+<hr />
+<h2 id="4-axis-3-epistemic-dependency-depth">4. Axis 3 — Epistemic-dependency depth<a class="anchor" href="#4-axis-3-epistemic-dependency-depth" aria-label="Link to this section">§</a></h2>
+<p><strong>The definition.</strong> How many other readings are conditioned by this one. Not how important the action is — how much else becomes <em>unreadable</em>, rather than merely wrong, if this is wrong.</p>
+<p><strong>Bands.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D0</strong></td>
+<td>Nothing reads through it.</td>
+</tr>
+<tr>
+<td><strong>D1</strong></td>
+<td>Conditions readings within its own domain.</td>
+</tr>
+<tr>
+<td><strong>D2</strong></td>
+<td>Conditions readings the governance layer uses to evaluate <em>other</em> actions.</td>
+</tr>
+<tr>
+<td><strong>D3</strong></td>
+<td>Conditions the field&rsquo;s account of itself — including the sensor that would register this action&rsquo;s own failure.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>D3 is the reflexive band, and it is the one the growth dashboard cannot see.</strong> A reading that conditions its own detection fails invisibly by construction: the corruption disables the instrument that would catch it. This is the informational-integrity finding at the funding layer, and it is why entrenchment hardness tracks self-concealment depth rather than stated importance.</p>
+<p><strong>The D3 question, stated plainly:</strong> <em>if this degraded, what would register the degradation — and does that registration run through the thing being funded?</em></p>
+<hr />
+<h2 id="5-the-routing-rule">5. The routing rule<a class="anchor" href="#5-the-routing-rule" aria-label="Link to this section">§</a></h2>
+<p>The three axes are <strong>not collapsed into a score.</strong> This is deliberate and it is not fastidiousness: a single significance number would be a quantity substitution performed on the framework&rsquo;s own instrument — the relation (how much can go wrong unseen) reified into a proxy (a rank), with an optimization frame following it in. The axes are non-collinear by design. An action can be maximal on one and null on the other two, and the reason <em>which</em> axis it is maximal on determines which instruments run.</p>
+<p>Routing is therefore lexical, not additive. Run in order; the first match assigns the lane.</p>
+<ol>
+<li><strong>Wall-touching through a non-acknowledging instrument</strong> → <strong>Gate 2 arrest.</strong> Structural analysis only. The finding is procedural and stands independent of the merits; no merits analysis is owed, and offering one would obscure the finding. The rationale must state what would make this a different proposal.</li>
+<li><strong>R0 or R1 (including by decay)</strong> → <strong>full lane.</strong> Hippocratic floor, six-rights read, trajectory and precedent assessment.</li>
+<li><strong>D3</strong> → <strong>full lane + mandatory distal sensing + mandatory reflexive check.</strong> The reflexive check is not optional here: D3 is by definition the band where the field is funding its own eyes.</li>
+<li><strong>D2 with an aggregate, temporal, or semiotic harm signature</strong> → <strong>full lane + distal sensing.</strong></li>
+<li><strong>Wall-building</strong> → <strong>full lane</strong>, running the entrenchment test in the confirming direction.</li>
+<li><strong>Everything else — knob, R2/R3, D0/D1</strong> → <strong>shallow lane.</strong> Procedural check, Hippocratic floor, public-goods reconstruction, vote, short rationale.</li>
+</ol>
+<p><strong>Distal sensing is triggered by harm signature, not by action type or by stakes.</strong> Discrete harms are already covered by the violation tests; running the distal battery on them is cost without signal, and a sensor that fires on everything is the autoimmune failure the kernel-radius calibration exists to prevent. Distal sensing fires on harms that are aggregate (no single step is the violation), temporal (the capture is of a future), or semiotic (the reframing precedes and enables the taking).</p>
+<hr />
+<h2 id="6-the-intake-form">6. The intake form<a class="anchor" href="#6-the-intake-form" aria-label="Link to this section">§</a></h2>
+<p>Seven substantive questions. Each is tagged with the axis it feeds and with whether the proposer can answer it or the DRep must derive it. <strong>Answers are not taken at face value where the axis is contested; the tags say who speaks first, not who decides.</strong></p>
+<h3 id="0-identification-metadata-not-sort-key">§0 — Identification <em>(metadata, not sort key)</em><a class="anchor" href="#0-identification-metadata-not-sort-key" aria-label="Link to this section">§</a></h3>
+<p>GAID · on-chain action type · submission and expiration epochs · proposer · amount and denomination · sector, if one is claimed.</p>
+<h3 id="1-the-good">§1 — The good<a class="anchor" href="#1-the-good" aria-label="Link to this section">§</a></h3>
+<p><strong>Q1. What is the good, stated as a relation rather than a deliverable?</strong> <em>(proposer)</em>
+A deliverable is a thing produced. A relation is a capacity, security, or standing the commons maintains. Both are legitimate answers; the question is which one is being funded, because only the second is a public good in this framework&rsquo;s sense.</p>
+<p><strong>Q2. Is the good rivalrous? Who is excluded, and by what mechanism?</strong> <em>(proposer; DRep verifies)</em>
+Feeds the public-goods reconstruction. Note that the recipient&rsquo;s commercial or non-commercial status is <em>not</em> asked here and does not bear on the answer.</p>
+<h3 id="2-the-constraint-landscape-axis-1">§2 — The constraint landscape <em>(Axis 1)</em><a class="anchor" href="#2-the-constraint-landscape-axis-1" aria-label="Link to this section">§</a></h3>
+<p><strong>Q3. Does approval require any structural constraint to be treated as tunable, or install a default where a per-action decision now stands?</strong> <em>(DRep derives; proposer may contest)</em>
+Includes: denomination requirements, delegation and auto-abstain constraints, seniority rules, per-cycle decision points, and any renewal that occurs by default rather than by action.</p>
+<h3 id="3-reversal-axis-2">§3 — Reversal <em>(Axis 2)</em><a class="anchor" href="#3-reversal-axis-2" aria-label="Link to this section">§</a></h3>
+<p><strong>Q4. If this were wrong in eighteen months, what reverses it — who initiates, through what instrument, against what resistance?</strong> <em>(proposer answers; DRep derives independently)</em></p>
+<p><strong>Q5. Does the cost of reversal rise over the life of the action?</strong> <em>(DRep derives)</em>
+The decay flag. Sort on the terminal band.</p>
+<h3 id="4-dependency-axis-3">§4 — Dependency <em>(Axis 3)</em><a class="anchor" href="#4-dependency-axis-3" aria-label="Link to this section">§</a></h3>
+<p><strong>Q6. What reads through this? Name the downstream readings and count the layers.</strong> <em>(proposer answers; DRep derives independently)</em></p>
+<p><strong>Q7. If this degraded, what would register the degradation — and does that registration run through the thing being funded?</strong> <em>(DRep derives; proposer&rsquo;s answer is itself data)</em></p>
+<h3 id="5-the-reflexive-check-mandatory-at-d3-discretionary-elsewhere">§5 — The reflexive check <em>(mandatory at D3, discretionary elsewhere)</em><a class="anchor" href="#5-the-reflexive-check-mandatory-at-d3-discretionary-elsewhere" aria-label="Link to this section">§</a></h3>
+<p>Does this action fund, condition, or constitute any instrument through which this DRep&rsquo;s own readings are made? Is the DRep a party, a beneficiary, or a downstream consumer? A sensor that cannot read the hand holding it is not a sensor.</p>
+<h3 id="6-sort-output">§6 — Sort output<a class="anchor" href="#6-sort-output" aria-label="Link to this section">§</a></h3>
+<p>Axis 1 state · Axis 2 band (+ decay flag) · Axis 3 band · lane assigned · instruments triggered · <strong>no vote, no score, no recommendation.</strong></p>
+<hr />
+<h2 id="7-reading-a-non-answer">7. Reading a non-answer<a class="anchor" href="#7-reading-a-non-answer" aria-label="Link to this section">§</a></h2>
+<p>Q4, Q6, and Q7 are not currently asked by any proposal template in the ecosystem. Most proposals will not answer them, and <strong>a non-answer is not a defect in the proposal.</strong> It is a reading of the ecosystem&rsquo;s present vocabulary, and it belongs in the trajectory log rather than in the finding.</p>
+<p>The distinction that does matter: a proposal that <em>cannot</em> answer Q7 and a proposal that <em>has not been asked</em> Q7 are different objects. Where the question has been put and the answer is unavailable, that unavailability is substantive — the absence of a sensor is exactly what Failure 3 reads. Where the question was never put, the appropriate response is to put it, publicly, and let the answer inform the next cycle.</p>
+<p>Opacity raises vigilance; it does not lower it. But it raises vigilance on the <em>reading</em>, not on the proposer.</p>
+<hr />
+<h2 id="8-interaction-with-standing-policies">8. Interaction with standing policies<a class="anchor" href="#8-interaction-with-standing-policies" aria-label="Link to this section">§</a></h2>
+<p><strong>The sort runs before any standing policy is applied.</strong> This ordering is protective, and the case it protects against is concrete: a for-profit entity maintaining a widely-used open-source tool carries a commercial sector label while presenting a non-rivalrous good with discrete delivery — a commons-derived claim by every axis that matters. A standing policy keyed to the sector label would fire on it wrongly.</p>
+<p>That mis-fire is not a null act. Explicit abstention removes delegated stake from the active voting stake and therefore lowers the bar for passage, which means a mis-triggered standing abstain has a direction. The sort is what keeps standing policy from doing work the derivation did not authorize. <em>(Treated fully in the abstention spines; noted here because the ordering constraint lives in this document.)</em></p>
+<hr />
+<h2 id="9-how-to-use-this">9. How to use this<a class="anchor" href="#9-how-to-use-this" aria-label="Link to this section">§</a></h2>
+<p><strong>Run it over time, not once.</strong> Actions with decay flags must be re-sorted at each renewal, and the movement between sorts is the finding — not either sort alone.</p>
+<p><strong>Run the sort before reading the merits.</strong> The lane determines which instruments run. Reading the merits first and then choosing the depth is how the depth ends up chosen to fit a conclusion already reached.</p>
+<p><strong>Publish the sort with the rationale.</strong> The lane assignment and the axis readings are part of the reasoning, not scaffolding to be discarded. A reader who disagrees with the vote should be able to locate whether the disagreement is about the sort or about the analysis, because those are different arguments and only one of them is about the proposal.</p>
+<p><strong>Argue with the axes.</strong> Find an action the axes sort wrongly and the axes change. That is the mechanism by which this instrument stays an instrument.</p>
+<hr />
+<h2 id="appendix-a-calibration-three-open-source-infrastructure-archetypes">Appendix A — Calibration: three open-source infrastructure archetypes<a class="anchor" href="#appendix-a-calibration-three-open-source-infrastructure-archetypes" aria-label="Link to this section">§</a></h2>
+<p>Constructed, not real. All three carry an identical sector tag and an identical ask shape.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>A — discrete maintainer</strong></th>
+<th><strong>B — instrument layer</strong></th>
+<th><strong>C — standing administrator</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shape</td>
+<td>12-month funding, named deliverables, sunsets at term</td>
+<td>Operational funding for chain-indexing, metrics, or governance-portal infrastructure</td>
+<td>Multi-year evergreen allocation to an administering entity, renewal by default</td>
+</tr>
+<tr>
+<td><strong>Axis 1</strong></td>
+<td>Knob</td>
+<td>Knob</td>
+<td><strong>Wall-touching</strong> — installs a structural default; touches the funds-holding constraint</td>
+</tr>
+<tr>
+<td><strong>Axis 2</strong></td>
+<td>R3 — lapses on its own terms</td>
+<td>R1 — reversal contested; the capacity to <em>notice</em> degradation runs through the thing degrading</td>
+<td>R1, decaying toward R0</td>
+</tr>
+<tr>
+<td><strong>Axis 3</strong></td>
+<td>D1</td>
+<td><strong>D3</strong> — the governance layer&rsquo;s self-account renders through it</td>
+<td>D2</td>
+</tr>
+<tr>
+<td><strong>Lane</strong></td>
+<td>Shallow</td>
+<td>Full + distal sensing + reflexive check</td>
+<td>Gate 2 arrest</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What the sort caught.</strong> A and B are indistinguishable by sector, by ask shape, and by register, and sit two tiers apart. B is the case where the framework has something to say that nothing else in the ecosystem is saying — and it is a live instance of the standing distal-sensor inquiry, arriving as a vote rather than as an architectural question.</p>
+<p><strong>What the sort refused.</strong> B and C are both high-entrenchment for entirely unrelated reasons, and neither is high on all three axes. Any composite score would have flattened that difference and routed them identically. They route to different lanes and produce different findings.</p>
+<hr />
+<p><em>Method note: this instrument sorts governance actions by how much can go wrong that would not announce itself. It assigns depth of analysis; it does not assign votes, and its output is never a verdict. The three axes are drawn from the field-fitness audit and the entrenchment findings; the routing rule is lexical rather than additive by design. Findings are fitness gaps, not accusations. Re-run each cycle; sort before reading merits; publish with the rationale.</em></p>
+      
+      <section class="panel" id="lineage">
+  <h3>Derivation lineage</h3>
+  <ul class="lineage"><li><span class="rel">derives_from</span><span><a href="../../instruments/field-fitness-audit/">field-fitness-audit (the four failures; Failure 3 sensing; kernel-radius calibration)</a></span></li><li><span class="rel">derives_from</span><span><a href="../../foundations/rights/">holder_rights_articulation (the six rights as the integrity sensor)</a></span></li><li><span class="rel">refines</span><span><a href="../../notes/the-good-that-is-not-a-quantity/">The Good That Is Not a Quantity (entrenchment test; burden shift; wall-to-knob tell)</a></span></li><li><span class="rel">instantiates</span><span><a href="../../foundations/sieve-and-frontier/">The Sieve and the Frontier (walls and knobs)</a></span></li><li><span class="rel">evidenced_by</span><span>v2.4 Amendment Voting Rationale (procedural fail-state as a finding independent of merits)</span></li><li><span class="rel">tested_by</span><span>three open-source infrastructure archetypes (Appendix A)</span></li></ul>
+</section>
+
+      <section class="cite panel" id="cite">
+  <h3>Cite this page</h3>
+  <p>This URL is stable. Link it directly from a voting rationale, a forum post, or a proposal comment.</p>
+  <p class="perma"><span>https://styg50.github.io/coordination-commons/instruments/intake-and-sort/</span>
+     <button class="copy" type="button" data-copy="https://styg50.github.io/coordination-commons/instruments/intake-and-sort/">Copy link</button></p>
+  <p style="margin-bottom:0"><small>Jeremy Bolander, “Proposal Intake and Sort,” <em>The Coordination Commons</em>. </small></p>
+</section>
+
+      <div class="updown pair"><a class="prev" href="../../instruments/field-fitness-audit/"><span class="lbl">Previous in Instruments</span><span class="ttl">Finishing Verifiable Reflexivity</span></a><a class="next" href="../../instruments/abstention-spines/"><span class="lbl">Next in Instruments</span><span class="ttl">Abstention Spines</span></a></div>
+    </article>
+  </div>
+</div>
+
+</main>
+<footer class="site-foot">
+  <div class="shell">
+    <div class="cols">
+      <div>
+        <h4>The space</h4>
+        <p>The public reference behind the voting rationales of <strong>Jeremy Bolander</strong>,
+        a Cardano DRep. Everything asserted in a vote of mine is derived somewhere on these pages, and
+        every page is permanently addressable so a disagreement can start where it actually starts.</p>
+      </div>
+      <div><h4>Funnels</h4><ul><li><a href="../../foundations/">Foundations</a></li><li><a href="../../seam/">The Seam</a></li><li><a href="../../instruments/">Instruments</a></li><li><a href="../../rationales/">Rationales</a></li><li><a href="../../notes/">Notes</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul>
+        <li><a href="../../index-of-work/">Index of all work</a></li>
+        <li><a href="../../about/">About &amp; how to cite</a></li>
+        <li><a href="https://x.com/styg50" rel="me noopener">@styg50</a></li>
+        <li><a href="https://gov.tools" rel="noopener">GovTool</a></li>
+      </ul></div>
+    </div>
+    <p class="fine">These pages re-version. Where a page and the corpus beneath it disagree, the corpus
+    governs and the page is out of date. Rights here are argued to be discovered rather than decreed —
+    which means the argument is open to being shown wrong, and the four falsification conditions are
+    published on <a href="../../foundations/what-cardano-is/#9-what-would-change-my-mind">the stance page</a>.</p>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

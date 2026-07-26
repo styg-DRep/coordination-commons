@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concept Graph Schema · The Coordination Commons</title>
+<meta name="description" content="How the corpus is wired: node types, the nine edge relations, and the deliberate gap where the most important edge on the site is left untyped.">
+<meta name="author" content="Jeremy Bolander">
+<meta property="og:title" content="Concept Graph Schema">
+<meta property="og:description" content="How the corpus is wired: node types, the nine edge relations, and the deliberate gap where the most important edge on the site is left untyped.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coordination Commons">
+<link rel="canonical" href="https://styg50.github.io/coordination-commons/notes/concept-graph-schema/">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="../../">The Coordination Commons <span>· a DRep reference</span></a>
+    <nav aria-label="Primary"><a href="../../foundations/">Foundations</a><a href="../../seam/" class="is-seam">The Seam</a><a href="../../instruments/">Instruments</a><a href="../../rationales/">Rationales</a><a href="../../notes/" aria-current="page">Notes</a><a href="../../index-of-work/">All work</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="shell">
+  <div class="page-head">
+    <div class="headwrap">
+      <p class="eyebrow"><a href="../../">Space</a><span class="sep">›</span><a href="../../notes/">Notes</a><span class="sep">›</span>Infrastructure · Working draft</p>
+      <h1>Concept Graph Schema</h1>
+      <p class="standfirst">The frontmatter schema and typed-edge vocabulary the corpus is authored against</p>
+      
+    </div>
+  </div>
+  <div class="doc">
+    <aside class="rail">
+  <h2>On this page</h2>
+  <nav aria-label="On this page"><ol><li><a href="#why-this-document-exists">Why This Document Exists</a></li><li><a href="#two-node-types">Two Node Types</a></li><li><a href="#concept-node-schema">Concept Node Schema</a></li><li><a href="#artifact-node-schema">Artifact Node Schema</a></li><li><a href="#edge-type-vocabulary">Edge Type Vocabulary</a></li><li class="lvl3"><a href="#derives-from-derives">derives_from / derives</a></li><li class="lvl3"><a href="#refines-refined-by">refines / refined_by</a></li><li class="lvl3"><a href="#contrasts-with-symmetric">contrasts_with (symmetric)</a></li><li class="lvl3"><a href="#composed-of-composes">composed_of / composes</a></li><li class="lvl3"><a href="#instantiated-by-instantiates">instantiated_by / instantiates</a></li><li class="lvl3"><a href="#violated-by-violates">violated_by / violates</a></li><li class="lvl3"><a href="#protected-by-protects">protected_by / protects</a></li><li class="lvl3"><a href="#tested-by-tests">tested_by / tests</a></li><li class="lvl3"><a href="#evidenced-by-evidence-for">evidenced_by / evidence_for</a></li><li><a href="#a-note-on-whats-not-here">A Note on What&amp;rsquo;s Not Here</a></li><li><a href="#naming-conventions">Naming Conventions</a></li><li><a href="#authoring-views-obsidian-dataview">Authoring Views (Obsidian Dataview)</a></li><li><a href="#quartz-rendering-notes">Quartz Rendering Notes</a></li><li><a href="#adoption-path">Adoption Path</a></li><li><a href="#open-questions-for-this-schema">Open Questions for This Schema</a></li></ol></nav>
+  <h2>In Notes</h2>
+  <nav><ol><li><a href="../../notes/">← All notes</a></li></ol></nav>
+</aside>
+
+    <article class="body">
+      
+      
+      <p><strong>Status:</strong> Working draft, v0.1
+<strong>Purpose:</strong> Define the frontmatter schema and edge type vocabulary used to author the concept graph in Obsidian and render it through Quartz.
+<strong>Audience:</strong> The author and any future collaborators contributing to the framework.</p>
+<hr />
+<h2 id="why-this-document-exists">Why This Document Exists<a class="anchor" href="#why-this-document-exists" aria-label="Link to this section">§</a></h2>
+<p>The hub-and-spoke architecture commits the project to two things that are in tension: a deep derivational center, and standalone public-facing spokes. A typed concept graph is the mechanism that lets both be true. Concepts are nodes with stable definitions and explicit relationships; artifacts (primers, tools, papers, case studies) are nodes that <em>use</em> and <em>introduce</em> concepts. The graph lets readers move by concept across spokes, lets authors check coverage and consistency, and lets the derivational chain be rendered rather than implied.</p>
+<p>The schema below is the minimum needed to do this work. It is intentionally smaller than what mature knowledge-graph systems support. Resist expanding the edge vocabulary until real authoring proves a new type is necessary, because every new edge type creates an authoring burden across the whole vault.</p>
+<hr />
+<h2 id="two-node-types">Two Node Types<a class="anchor" href="#two-node-types" aria-label="Link to this section">§</a></h2>
+<p>Every markdown file in the vault is either a <strong>concept node</strong> or an <strong>artifact node</strong>. The distinction matters because they serve different functions and render differently.</p>
+<p>A <strong>concept node</strong> defines a single concept in the framework. It is the canonical home of that concept&rsquo;s definition, its position in the derivational chain, and its typed relationships to other concepts. Concept nodes live under <code>/concepts/</code> and use a single canonical filename (e.g. <code>coordination-commons.md</code>). They are short — generally a definition, a short derivation note, and frontmatter doing the structural work.</p>
+<p>An <strong>artifact node</strong> is any piece of writing meant to be read on its own — a primer, a working paper, a tool, a case study, an explainer, an amendment rationale. Artifact nodes live under <code>/artifacts/&lt;spoke&gt;/</code> and reference concepts. They are where the actual prose of the project lives.</p>
+<p>The split keeps definitions stable and reusable. A concept&rsquo;s definition lives in one place; every artifact that uses the concept links to it; readers get consistent meaning across the whole vault.</p>
+<hr />
+<h2 id="concept-node-schema">Concept Node Schema<a class="anchor" href="#concept-node-schema" aria-label="Link to this section">§</a></h2>
+<pre><code class="language-yaml">---
+# Identity
+type: concept
+id: coordination-commons
+canonical_name: &quot;Coordination Commons&quot;
+aliases:
+  - &quot;coordination protocol commons&quot;
+  - &quot;monetary commons&quot;
+
+# Position in the framework
+status: stable                   # exploratory | contested | stable | placeholder
+chain_position: foundational     # foundational | derived | applied | diagnostic
+spoke_home: A                    # the spoke that owns the canonical definition
+hub_member: true                 # is this part of the deep hub?
+
+# Definitional content
+one_line: &quot;A shared infrastructure for coordinating productive exchange that cannot legitimately be owned by any subset of its participants.&quot;
+canonical_artifact: &quot;[[The_Coordination_Commons]]&quot;
+introduced_in: &quot;[[The_Coordination_Commons]]&quot;
+
+# Typed edges — see edge vocabulary below
+derives_from:
+  - &quot;[[money-as-protocol]]&quot;
+  - &quot;[[productive-agency]]&quot;
+refines:
+  - &quot;[[commons]]&quot;
+contrasts_with:
+  - &quot;[[private-infrastructure]]&quot;
+  - &quot;[[shareholder-claim]]&quot;
+composed_of:
+  - &quot;[[symbolic-claim]]&quot;
+  - &quot;[[settlement]]&quot;
+  - &quot;[[constitutive-participation]]&quot;
+instantiated_by:
+  - &quot;[[open-source-p2p-blockchain]]&quot;
+violated_by:
+  - &quot;[[enclosure]]&quot;
+  - &quot;[[reification]]&quot;
+  - &quot;[[toll-extraction]]&quot;
+protected_by:
+  - &quot;[[settlement-access-right]]&quot;
+  - &quot;[[governance-participation-right]]&quot;
+
+# Provenance and revision
+last_revised: 2026-05-18
+revision_notes: &quot;[[changelog#coordination-commons]]&quot;
+contested_by: []                 # links to objection notes
+open_questions:
+  - &quot;[[oq-commons-boundary]]&quot;
+
+# Tags for filtering and views
+tags:
+  - concept
+  - hub
+  - foundational
+---
+
+## Definition
+
+A coordination commons is a shared infrastructure for coordinating productive
+exchange whose value emerges from the participation of all its co-constituents,
+and which therefore cannot legitimately be owned, enclosed, or governed by
+any subset of those participants without violating the foundational
+relationship that gives it value.
+
+## Why It Sits Where It Sits in the Chain
+
+The concept follows from the money ontology: once money is understood as a
+coordination protocol rather than a commodity, the question of *what the
+protocol coordinates* and *whose participation constitutes it* yields the
+commons claim. It precedes the rights derivation because the constitutive
+relationship between participants and the commons is what generates rights
+rather than preferences.
+
+## Notes on Use
+
+This concept is foundational and should be linked, not paraphrased, in artifacts
+that depend on its specific meaning. The aliases above capture common informal
+usage; the canonical name should be preferred in formal artifacts.
+</code></pre>
+<p>A few notes on the design:</p>
+<p>The <code>id</code> field uses kebab-case and matches the filename. Wikilinks throughout the vault use this id; the <code>canonical_name</code> is purely for display. This separation lets you rename a concept&rsquo;s display form without breaking links.</p>
+<p><code>status</code> is the single most important field for readers. It tells them whether to treat a concept as load-bearing or provisional. <code>placeholder</code> is reserved for concepts that have a name but no real derivation yet — useful for noting future work without pretending it&rsquo;s done.</p>
+<p><code>chain_position</code> is a coarse classifier of where the concept lives in the derivational logic. <code>foundational</code> sits in the hub. <code>derived</code> follows from foundational concepts (e.g. specific rights). <code>applied</code> is concepts that emerge in operational work (e.g. specific capture patterns). <code>diagnostic</code> is concepts used in tests or rubrics. This isn&rsquo;t a strict hierarchy; it&rsquo;s a navigation aid.</p>
+<p><code>canonical_artifact</code> is the artifact a reader should be sent to if they want the full treatment, not just the definition. It may differ from <code>introduced_in</code> over time, as treatments mature.</p>
+<hr />
+<h2 id="artifact-node-schema">Artifact Node Schema<a class="anchor" href="#artifact-node-schema" aria-label="Link to this section">§</a></h2>
+<pre><code class="language-yaml">---
+# Identity
+type: artifact
+id: blockchain-money-primer
+title: &quot;From Coordination Protocol to Constitutional Commons: A Primer&quot;
+
+# Classification
+artifact_class: primer           # working_paper | primer | tool | education |
+                                 # case_study | amendment | objection | one_pager
+spoke: B
+depth_level: 2                   # 1=standalone, 2=lightly-grounded,
+                                 # 3=hub-dependent, 4=constitutional-action
+status: stable                   # draft | review | stable | archived
+version: &quot;1.2&quot;
+
+# Audience and use
+audience:
+  - DReps
+  - SPOs
+  - rights-interested token holders
+reading_time_minutes: 25
+prerequisites: []
+reading_paths:
+  - drep-onboarding
+  - amendment-author-orientation
+
+# Concept relationships
+introduces_concepts:
+  - &quot;[[coordination-commons]]&quot;
+  - &quot;[[constitutive-participation]]&quot;
+uses_concepts:
+  - &quot;[[money-as-protocol]]&quot;
+  - &quot;[[productive-agency]]&quot;
+  - &quot;[[settlement]]&quot;
+tests_concepts: []               # case studies and tools populate this
+
+# Provenance
+last_revised: 2026-05-18
+authors:
+  - primary-author
+revision_history: &quot;[[changelog#blockchain-money-primer]]&quot;
+objections: []
+license: CC-BY-SA-4.0
+
+tags:
+  - artifact
+  - primer
+  - spoke-B
+---
+</code></pre>
+<p>The <code>depth_level</code> and <code>prerequisites</code> fields together drive the site&rsquo;s readiness gates. A reader hitting a depth-3 artifact can be shown a &ldquo;this assumes familiarity with X, Y, Z&rdquo; panel that links into the prerequisite artifacts. A depth-1 artifact promises it can be read cold.</p>
+<p><code>reading_paths</code> are the curated journeys mentioned in the architecture feedback — finite, named, with clear endpoints. They&rsquo;re the third axis alongside spokes and depth levels.</p>
+<p><code>introduces_concepts</code> vs <code>uses_concepts</code> matters more than it looks. An artifact <em>introduces</em> a concept when it provides the canonical or near-canonical treatment; it <em>uses</em> a concept when it depends on the treatment elsewhere. Quartz can render the difference: a concept page can show &ldquo;introduced in&rdquo; prominently and &ldquo;used in&rdquo; as a secondary list.</p>
+<hr />
+<h2 id="edge-type-vocabulary">Edge Type Vocabulary<a class="anchor" href="#edge-type-vocabulary" aria-label="Link to this section">§</a></h2>
+<p>The edge types are deliberately small. Each one carries an argumentative function that an untyped link would obscure. Every edge is directional unless explicitly noted; the inverse is computed at render time, not authored on both ends.</p>
+<h3 id="derives-from-derives">derives_from / derives<a class="anchor" href="#derives-from-derives" aria-label="Link to this section">§</a></h3>
+<p>The spine of the framework. A concept <em>derives_from</em> the concepts whose prior establishment is logically required for it. Use sparingly — only for relationships where the dependency is strict, not merely thematic. The graph of <code>derives_from</code> edges should be a directed acyclic graph rooted at the money ontology; if you find a cycle, something is wrong with the derivation.</p>
+<p><em>Example:</em> <code>coordination-commons</code> derives_from <code>money-as-protocol</code>.</p>
+<h3 id="refines-refined-by">refines / refined_by<a class="anchor" href="#refines-refined-by" aria-label="Link to this section">§</a></h3>
+<p>A concept <em>refines</em> a more general concept by specifying it further. Use when the refining concept could substitute for the general one in some contexts but adds precision or constraint.</p>
+<p><em>Example:</em> <code>constitutional-debt</code> refines <code>governance-gap</code>. <code>tokenomic-capture</code> refines <code>capture</code>.</p>
+<h3 id="contrasts-with-symmetric">contrasts_with (symmetric)<a class="anchor" href="#contrasts-with-symmetric" aria-label="Link to this section">§</a></h3>
+<p>A concept <em>contrasts_with</em> another concept when the contrast is doing real definitional work — when readers will best understand the concept by understanding what it is <em>not</em>. This is the only symmetric edge type; authoring it on one side renders it on both.</p>
+<p><em>Example:</em> <code>token-holder</code> contrasts_with <code>shareholder</code>, <code>citizen</code>, <code>customer</code>.</p>
+<h3 id="composed-of-composes">composed_of / composes<a class="anchor" href="#composed-of-composes" aria-label="Link to this section">§</a></h3>
+<p>A concept is <em>composed_of</em> its structural parts. Use when the parts are themselves concepts with their own pages, not merely component ideas.</p>
+<p><em>Example:</em> <code>reciprocity-loop</code> is composed_of <code>service-to-commons</code>, <code>recognition</code>, <code>proportionate-return</code>.</p>
+<h3 id="instantiated-by-instantiates">instantiated_by / instantiates<a class="anchor" href="#instantiated-by-instantiates" aria-label="Link to this section">§</a></h3>
+<p>An abstract concept is <em>instantiated_by</em> a concrete instance. Use to connect framework-level concepts to specific cases, mechanisms, or implementations.</p>
+<p><em>Example:</em> <code>coordination-commons</code> instantiated_by <code>open-source-p2p-blockchain</code>. <code>capture-pattern</code> instantiated_by <code>treasury-syndicate-formation</code> (in a case study).</p>
+<h3 id="violated-by-violates">violated_by / violates<a class="anchor" href="#violated-by-violates" aria-label="Link to this section">§</a></h3>
+<p>A right or commons condition is <em>violated_by</em> specific mechanisms. The inverse direction — <code>violates</code> on the mechanism side — is computed automatically.</p>
+<p><em>Example:</em> <code>unit-of-account-integrity</code> violated_by <code>tokenomic-capture</code>, <code>silent-issuance-adjustment</code>.</p>
+<h3 id="protected-by-protects">protected_by / protects<a class="anchor" href="#protected-by-protects" aria-label="Link to this section">§</a></h3>
+<p>A right or commons condition is <em>protected_by</em> mechanisms, rights, or constraints. Symmetrically computed.</p>
+<p><em>Example:</em> <code>coordination-commons</code> protected_by <code>settlement-access-right</code>, <code>governance-participation-right</code>.</p>
+<h3 id="tested-by-tests">tested_by / tests<a class="anchor" href="#tested-by-tests" aria-label="Link to this section">§</a></h3>
+<p>A concept is <em>tested_by</em> diagnostic tools, checklists, or case studies that exercise it. This is how operational artifacts surface back into the concept graph.</p>
+<p><em>Example:</em> <code>public-capacity</code> tested_by <code>[[public-capacity-test]]</code>. <code>capture-pattern</code> tested_by <code>[[treasury-capture-checklist]]</code>.</p>
+<h3 id="evidenced-by-evidence-for">evidenced_by / evidence_for<a class="anchor" href="#evidenced-by-evidence-for" aria-label="Link to this section">§</a></h3>
+<p>A claim or pattern is <em>evidenced_by</em> case studies, governance actions, or empirical observations.</p>
+<p><em>Example:</em> <code>enclosure-sequence</code> evidenced_by <code>[[case-historical-fiat-capture]]</code>.</p>
+<hr />
+<h2 id="a-note-on-whats-not-here">A Note on What&rsquo;s <em>Not</em> Here<a class="anchor" href="#a-note-on-whats-not-here" aria-label="Link to this section">§</a></h2>
+<p>I left out several edge types you might expect to see, because they would expand authoring burden faster than they pay off:</p>
+<p><code>related_to</code> — too vague to render usefully; degrades into untyped backlinks.</p>
+<p><code>implies</code> and <code>entails</code> — these are doing the same work as <code>derives_from</code> for most cases; collapse them.</p>
+<p><code>opposes</code> — usually <code>contrasts_with</code> is what you actually mean; reserve <code>opposes</code> for the rare case of genuine normative opposition between concepts.</p>
+<p><code>see_also</code> — the wikilinks in prose handle this; no need to formalize.</p>
+<p>If a real authoring need arises that none of the above edges fits, add a type. Don&rsquo;t pre-populate.</p>
+<hr />
+<h2 id="naming-conventions">Naming Conventions<a class="anchor" href="#naming-conventions" aria-label="Link to this section">§</a></h2>
+<p>Filenames and ids are lowercase, hyphen-separated, singular: <code>coordination-commons.md</code>, not <code>Coordination_Commons.md</code> or <code>coordination-commonses.md</code>.</p>
+<p>Concept ids should be nouns or noun phrases. Mechanisms (things that violate) can be verbs nominalized: <code>enclosure</code>, <code>toll-extraction</code>, <code>silent-issuance-adjustment</code>.</p>
+<p>Rights use the pattern <code>&lt;thing&gt;-&lt;right-type&gt;</code> where useful: <code>settlement-access-right</code>, <code>governance-participation-right</code>, <code>unit-of-account-integrity</code> (here the integrity is the right).</p>
+<p>Aliases capture how the ecosystem actually talks. Include misleading or overloaded terms here so the canonical concept is findable from common search queries.</p>
+<hr />
+<h2 id="authoring-views-obsidian-dataview">Authoring Views (Obsidian Dataview)<a class="anchor" href="#authoring-views-obsidian-dataview" aria-label="Link to this section">§</a></h2>
+<p>The schema is designed to be queryable with Obsidian&rsquo;s Dataview plugin. Some views I&rsquo;d recommend setting up from day one:</p>
+<p>A <strong>coverage view</strong> that lists every concept with <code>status: placeholder</code> so unfinished derivations are visible.</p>
+<p>A <strong>derivation map</strong> that walks <code>derives_from</code> recursively from any chosen concept back to the foundational concepts. This is the author&rsquo;s check on whether the chain is intact.</p>
+<p>An <strong>orphan check</strong> that lists concepts with no incoming edges — these are either foundational or genuinely orphaned, and you want to know which.</p>
+<p>A <strong>contested-concepts view</strong> that lists concepts where <code>contested_by</code> is non-empty, sorted by recency. This is the live dashboard of the project&rsquo;s open arguments.</p>
+<p>An <strong>artifact coverage view</strong> that lists every concept and counts how many artifacts introduce or use it. Concepts with zero artifact uses are candidates for either removal or future writing; concepts with many uses but only one introducing artifact may need clearer canonical treatment.</p>
+<p>A <strong>reading path view</strong> that, for each named path in <code>reading_paths</code>, lists the artifacts in order. This is the editorial check on whether paths actually exist as coherent journeys.</p>
+<p>These queries are also the foundation for Quartz components later — the same Dataview logic translates to data-driven Astro components.</p>
+<hr />
+<h2 id="quartz-rendering-notes">Quartz Rendering Notes<a class="anchor" href="#quartz-rendering-notes" aria-label="Link to this section">§</a></h2>
+<p>Quartz handles the basic case (wikilinks, popover previews, backlinks, graph view) out of the box. The schema above requires some custom transformers and components beyond that.</p>
+<p><strong>Typed backlinks.</strong> The default Quartz backlinks panel is untyped. A custom transformer should read the edge fields from frontmatter and group backlinks by relationship type. On a concept page, this renders as sections: &ldquo;Derives from,&rdquo; &ldquo;Refined by,&rdquo; &ldquo;Instantiated by,&rdquo; &ldquo;Violated by,&rdquo; etc. This is the single most important visible difference between this site and a generic Quartz vault.</p>
+<p><strong>Definition peek.</strong> Quartz&rsquo;s popover previews can show the first paragraph of a linked page on hover. For concept nodes, the <code>one_line</code> frontmatter field is a better preview than the first paragraph — short, definitional, and reliable. A small modification to the popover component to prefer <code>one_line</code> when the linked node is a concept is worth the effort.</p>
+<p><strong>Status badges.</strong> Render <code>status</code> as a visible badge on every concept and artifact page. Readers should never have to guess whether they&rsquo;re looking at stable or exploratory content.</p>
+<p><strong>Depth and prerequisite gating.</strong> On artifact pages with <code>depth_level &gt;= 3</code>, render a prerequisite panel at the top with links to the prerequisite artifacts and a one-line summary of what each contributes. This makes the architecture&rsquo;s dependency model visible.</p>
+<p><strong>Reading paths.</strong> Implement reading paths as a separate top-level navigation. Each path has its own page that walks the artifacts in order with brief connective tissue between them. The frontmatter field on each artifact populates these automatically.</p>
+<p><strong>Concept page template.</strong> Concept pages should render in a consistent layout: name, aliases, status, one-line definition, derivation note, typed-edge sections, canonical-artifact link, open questions, contested-by notes. The body content of the markdown file fills the middle section; the rest is frontmatter-driven.</p>
+<p><strong>Graph view filtering.</strong> The default graph view is overwhelming and rarely useful at full scale. Configure it to filter by edge type — let readers see just the derivation graph, just the violations graph, etc. This turns the graph view from a curiosity into a genuine analytic tool.</p>
+<hr />
+<h2 id="adoption-path">Adoption Path<a class="anchor" href="#adoption-path" aria-label="Link to this section">§</a></h2>
+<p>Don&rsquo;t migrate everything at once. The schema is most valuable when applied to the concepts that do the most argumentative work; trying to backfill every minor term will exhaust the authoring effort.</p>
+<p>A reasonable sequence: take the core concepts you&rsquo;ve already worked out (money-as-protocol, coordination-commons, constitutive-participation, the named rights, the named capture mechanisms, constitutional-debt), give each a concept page with full frontmatter, and link the existing artifacts to them via <code>introduces_concepts</code> and <code>uses_concepts</code>. That alone is enough to power the most important reader behaviors: peek, typed backlinks, walk-the-derivation.</p>
+<p>Once that core is live, every new artifact authored introduces or refers to concepts using the same conventions, and the graph grows naturally. Concepts that prove hard to fit the schema are the ones worth examining — usually they reveal a real ambiguity in the framework, not a defect in the schema.</p>
+<hr />
+<h2 id="open-questions-for-this-schema">Open Questions for This Schema<a class="anchor" href="#open-questions-for-this-schema" aria-label="Link to this section">§</a></h2>
+<p>These are real open questions worth surfacing rather than papering over.</p>
+<p>How should <em>contested</em> concepts work in practice? A concept whose definition is itself disputed needs a different rendering treatment than a stable concept with contested applications. Possibly a <code>contested</code> status value with a required <code>contestation_note</code> field.</p>
+<p>How should the schema handle Cardano-specific concepts (Tenets, DReps, Constitutional Committee, gov actions) that have their own canonical definitions elsewhere? Probably as concept nodes with a <code>external_canonical_source</code> field pointing to the official definition, plus the framework&rsquo;s analysis of how the concept fits.</p>
+<p>How should multi-author authorship and contributor attribution be represented when the project gains collaborators? The <code>authors</code> field is a placeholder; a real solution will need integration with whatever attribution conventions the project adopts.</p>
+<p>These should be resolved by the time the second wave of concept pages is authored, not before — let real use surface what&rsquo;s needed.</p>
+      
+      
+      <section class="cite panel" id="cite">
+  <h3>Cite this page</h3>
+  <p>This URL is stable. Link it directly from a voting rationale, a forum post, or a proposal comment.</p>
+  <p class="perma"><span>https://styg50.github.io/coordination-commons/notes/concept-graph-schema/</span>
+     <button class="copy" type="button" data-copy="https://styg50.github.io/coordination-commons/notes/concept-graph-schema/">Copy link</button></p>
+  <p style="margin-bottom:0"><small>Jeremy Bolander, “Concept Graph Schema,” <em>The Coordination Commons</em>. </small></p>
+</section>
+
+      <div class="updown"><a class="prev" href="../../notes/reciprocity-is-equality-contingent/"><span class="lbl">Previous in Notes</span><span class="ttl">Reciprocity Is Equality-Contingent</span></a></div>
+    </article>
+  </div>
+</div>
+
+</main>
+<footer class="site-foot">
+  <div class="shell">
+    <div class="cols">
+      <div>
+        <h4>The space</h4>
+        <p>The public reference behind the voting rationales of <strong>Jeremy Bolander</strong>,
+        a Cardano DRep. Everything asserted in a vote of mine is derived somewhere on these pages, and
+        every page is permanently addressable so a disagreement can start where it actually starts.</p>
+      </div>
+      <div><h4>Funnels</h4><ul><li><a href="../../foundations/">Foundations</a></li><li><a href="../../seam/">The Seam</a></li><li><a href="../../instruments/">Instruments</a></li><li><a href="../../rationales/">Rationales</a></li><li><a href="../../notes/">Notes</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul>
+        <li><a href="../../index-of-work/">Index of all work</a></li>
+        <li><a href="../../about/">About &amp; how to cite</a></li>
+        <li><a href="https://x.com/styg50" rel="me noopener">@styg50</a></li>
+        <li><a href="https://gov.tools" rel="noopener">GovTool</a></li>
+      </ul></div>
+    </div>
+    <p class="fine">These pages re-version. Where a page and the corpus beneath it disagree, the corpus
+    governs and the page is out of date. Rights here are argued to be discovered rather than decreed —
+    which means the argument is open to being shown wrong, and the four falsification conditions are
+    published on <a href="../../foundations/what-cardano-is/#9-what-would-change-my-mind">the stance page</a>.</p>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
