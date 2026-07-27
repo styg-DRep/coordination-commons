@@ -4,7 +4,7 @@ subtitle: Empirical anchor for Spoke D — volunteerism, compensation legitimacy
 type: evidence note
 layer: 1
 spoke: D (Governance Reciprocity and Incentives)
-status: draft — spoke-local; not yet hub-feeding
+status: draft, spoke-local; not yet hub-feeding
 source: Chen, A. M., & Saxe, R. (2026). Expectations of Reciprocal Generosity Are Specific to Equal Relationships. *Open Mind: Discoveries in Cognitive Science*, 10, 787–807. https://doi.org/10.1162/OPMI.a.357
 edges:
   - supports → Governance Reciprocity Framework (Spoke D)
