@@ -2,7 +2,7 @@
 title: From Tenets to Rights — A Trajectory Map of Articles I and II
 type: analysis
 status: draft 1.1
-author: Jeremy Bolander (analysis); mapping synthesis
+author: Styg (analysis); mapping synthesis
 role: lay-of-the-land orientation for collaborators
 related:
   - field-fitness-audit.md
@@ -10,14 +10,12 @@ related:
   - The_Rights_of_Participants_in_a_Constitutional_Coordination_Commons.md
   - the_verification_gap.md
 sources_used:
-  - Cardano Constitution v1.0, delegate-endorsed (full text, uploaded)
-  - Cardano Constitution v2.4 (full text, uploaded)
-  - Constitutional Trajectory Assessment, v2.4 amendment review (uploaded)
-  - Field Report on documented enactment vs. governance realities (uploaded)
-  - v1.0 endorsement / voting rationale (project knowledge)
-  - IOG, "The 11 blockchain tenets: towards a blockchain bill of rights" (Kiayias, full text, uploaded)
-changelog:
-  - "1.1 — v1.0 text and the IOG article now in hand. Three former inferences confirmed and one upgraded to a documented finding: (a) the reification error in T10 was *inserted at v2.4*, not present in v1.0 or IOG; (b) the Article II rights/role collision is a confirmed artifact of the 8→4 article consolidation; (c) IOG's verifiability tenet (T11) and privacy tenet (T9) were dropped at constitutionalization; (d) the Preamble's rights clause gained 'and the rights of ada owners' at v2.4."
+  - Cardano Constitution v1.0, delegate-endorsed (full text)
+  - Cardano Constitution v2.4 (full text)
+  - Constitutional Trajectory Assessment, v2.4 amendment review 
+  - Field Report on documented enactment vs. governance realities
+  - v1.0 endorsement / voting rationale 
+  - IOG, "The 11 blockchain tenets: towards a blockchain bill of rights" (Kiayias, full text)
 ---
 
 # From Tenets to Rights — A Trajectory Map of Articles I and II
@@ -62,7 +60,7 @@ The "gesture toward rights" claim does not require interpretation, because three
 
 **The Preamble / the promise.** The v1.0 Preamble commits the constitution to "guard the rights of those who utilize it." That is a promise of *protective* rights, and the Tenets are what was put in the slot where its fulfillment would go. (Worth noting in passing, and developed in §3.3: v2.4 widened this clause to "guard the rights of those who utilize it **and the rights of ada owners**" — the promise itself acquired an ownership framing in the amendment.)
 
-**The endorsement rationale / the reading at the time.** Your own v1.0 vote read the Tenets exactly this way: not as rights, but as the *embarkation toward* them. The rationale is explicit that this version "does not set out to enshrine rights specifically, instead adopting 'Tenets'… [that] can be evaluated in a methodical way over time to hopefully surface explicit rights." And the gap was nearly disqualifying: the lack of explicit rights protection brought the vote to the edge of a "No," with the *only* mitigating factor being "the presence of the Tenets in Article I, which establish both a start and a space for development of these frameworks." The Tenets were, in the most literal sense, the reason the document earned endorsement despite a missing rights layer. They were accepted **as a placeholder, on credit.**
+**The endorsement rationale / the reading at the time.** My own v1.0 vote read the Tenets exactly this way: not as rights, but as the *embarkation toward* them. The rationale is explicit that this version "does not set out to enshrine rights specifically, instead adopting 'Tenets'… [that] can be evaluated in a methodical way over time to hopefully surface explicit rights." And the gap was nearly disqualifying: the lack of explicit rights protection brought the vote to the edge of a "No," with the *only* mitigating factor being "the presence of the Tenets in Article I, which establish both a start and a space for development of these frameworks." The Tenets were, in the most literal sense, the reason the document earned endorsement despite a missing rights layer. They were accepted **as a placeholder, on credit.**
 
 That credit is the through-line into Stage 2.
 
@@ -119,7 +117,7 @@ Two facts make this more than a phrasing quibble:
 
 1. **It was not inherited.** The IOG eleven contain no monetary-stability tenet at all — there is nothing about "store of value" upstream to inherit. v1.0's T10 did not assert it either. The error entered the constitution *specifically at the v2.4 amendment*. It is a v2.4 addition, full stop.
 
-2. **The Trajectory Assessment did not catch it.** The assessment's only monetary observation was the "ADA Holder → ADA Owner" terminology note, flagged as "primarily symbolic." The T10 expansion — a substantive change to the constitution's definition of money, inserting the precise ontological error the rights framework exists to correct — passed under the radar of an otherwise thorough amendment review. That is worth correcting in the record, because it is arguably the single most consequential line in the v2.4 package for the rights project, and it sits in Article I rather than among the procedural amendments the assessment focused on.
+2. **The Trajectory Assessment did not catch it.** My assessment's only monetary observation was the "ADA Holder → ADA Owner" terminology note, flagged as "primarily symbolic." The T10 expansion — a substantive change to the constitution's definition of money, inserting the precise ontological error the rights framework exists to correct — passed under the radar of an otherwise thorough amendment review. That is worth correcting in the record, because it is arguably the single most consequential line in the v2.4 package for the rights project, and it sits in Article I rather than among the procedural amendments the assessment focused on.
 
 So the v2.4 monetary move runs exactly opposite to the rights trajectory: at the moment unit-of-account integrity should be pushing the constitution *toward* "ada as an index of productive trust," the amendment pushed it *toward* "ada as a store of value." The seed of a genuine monetary right and the rot that defeats it are now in the same sentence — and the rot was added last, not first.
 
@@ -164,7 +162,7 @@ The v1.0 text now confirms the inference, and the picture is sharper than the dr
 
 - **Article II — The Cardano Blockchain Community** (membership, beneficiary status, the bare participation entitlement, collaboration).
 - **Article III — Participatory and Decentralized Governance** (the governance model, the three bodies, the *right to vote* and *right to propose*, Info actions, governance-action standards, and the *open-and-transparent-process right*).
-- **Article IV — The Cardano Blockchain Ecosystem Budget** (its own standalone article — the "first-order citizen status" you read into its placement).
+- **Article IV — The Cardano Blockchain Ecosystem Budget** (its own standalone article).
 - **Article V — Delegated Representatives** (the DRep role and all delegation mechanics).
 - **Article VI — Stake Pool Operators.**
 
@@ -172,7 +170,7 @@ v2.4 collapsed eight articles into four. Article II ("Community and Governance")
 
 The user-facing puzzle — "participation rights" sitting in the same breath as defined roles — is now fully explained as a **manufactured artifact of that merge.** There is no "Participation Rights of ada owners" *heading* in v1.0 at all; the rights-flavored provisions are distributed: the participation entitlement in Article II §2, the voting and proposal rights in Article III §3, the open-process right in Article III §5, and the delegation mechanics in Article V. v2.4 invented the consolidated heading and, in the same stroke, surrounded it with the role definitions (DReps, SPOs) it had also just pulled into Article II. The categories a rights framework most needs kept apart — person-rights, role-procedure, public-good delivery — were not blurred by sloppy drafting; they were *administratively merged* by a consolidation pass. The budget's demotion from standalone Article IV to a subsection of Article II is the most legible single casualty.
 
-This is the document-architecture cousin of the "decision compression" your Trajectory Assessment found at the level of governance actions. The same compressing instinct that the assessment tracks in the amendment package also ran through the *structure of the text*, and one of the things it compressed was the rights/role boundary.
+This is the document-architecture cousin of the "decision compression" my Trajectory Assessment found at the level of governance actions. The same compressing instinct that the assessment tracks in the amendment package also ran through the *structure of the text*, and one of the things it compressed was the rights/role boundary.
 
 ---
 
@@ -180,13 +178,13 @@ This is the document-architecture cousin of the "decision compression" your Traj
 
 ### 3.1 What the debt is
 
-The constitutional debt is the gap between the Preamble's *promise* to guard rights and the Tenets' *delivery* of an unenforced gesture. It was made an explicit, conditional bargain: the field report records that token/holder rights were omitted **on the condition** that they enter "an active backlog of constitutional debt to be solved post-ratification." Your endorsement extended credit on the same understanding. The debt is real, it was contingent on a promise of future payment, and — because enacted-text platforms log only enacted text — it lives now as delegate memory and possibly buried meeting transcripts. It is near-forgotten precisely where it most needs to be visible.
+The constitutional debt is the gap between the Preamble's *promise* to guard rights and the Tenets' *delivery* of an unenforced gesture. It was made an explicit, conditional bargain: the field report records that token/holder rights were omitted **on the condition** that they enter "an active backlog of constitutional debt to be solved post-ratification." My endorsement extended credit on the same understanding. The debt is real, it was contingent on a promise of future payment, and — because enacted-text platforms log only enacted text — it lives now as delegate memory and possibly buried meeting transcripts. It is near-forgotten precisely where it most needs to be visible.
 
 ### 3.2 The drift is not neutral toward the debt — it dismantles the means of payment
 
 This is the load-bearing claim of the whole map, and it is what a newcomer most needs to grasp.
 
-Rights are not decreed in this framework; they are **derived and developed** — discovered through deliberation, contestation, staged refinement, and constitutional learning. Paying the debt therefore requires exactly the developmental capacities that the v2.4 package reduces. Your Trajectory Assessment and the field report converge on the **same five vectors** of drift (the field report restates your structural findings in operational/political register — they are one analysis in two voices, not independent corroboration):
+Rights are not decreed in this framework; they are **derived and developed** — discovered through deliberation, contestation, staged refinement, and constitutional learning. Paying the debt therefore requires exactly the developmental capacities that the v2.4 package reduces. My Trajectory Assessment and the field report converge on the **same five vectors** of drift (the field report restates my structural findings in operational/political register — they are one analysis in two voices, not independent corroboration):
 
 - reduced deliberative capacity
 - increased decision compression
@@ -200,13 +198,13 @@ In Field Fitness terms: a field that has shifted toward compliance adjudication 
 
 ### 3.3 The ownership-framing creep — three coordinated moves, not one terminology change
 
-Draft 1.0 flagged the "ADA Holder → ADA Owner" change as a single wrong-direction datapoint. With both texts in hand, it resolves into **three coordinated moves, all introduced at v2.4, all leaning the same way** — toward defining participants and their rights in terms of *ownership of the token* rather than *the agency the token serves*:
+Draft 1.0 flagged the "ADA Holder → ADA Owner" change as a single wrong-direction datapoint. However, it resolves into **three coordinated moves, all introduced at v2.4, all leaning the same way** — toward defining participants and their rights in terms of *ownership of the token* rather than *the agency the token serves*:
 
 1. **The Preamble's rights clause.** v1.0: "guard the rights of those who utilize it." v2.4: "guard the rights of those who utilize it **and the rights of ada owners**." The foundational promise itself acquired an ownership predicate.
 2. **Tenet 10.** v1.0 asserted nothing about what ada *is*; v2.4 defined it as a "**store of value**" (§1.4). The monetary tenet acquired the reification ontology.
 3. **The defined term.** "ada holder" → "ada owner" throughout — the change the assessment caught, now legible as the surface of a pattern rather than an isolated symbol.
 
-Your Trajectory Assessment treated the terminology change as "primarily symbolic" with "no significant operational governance effects." Structurally, that is correct. **Ontologically, the pattern is not neutral, and it points the wrong way.** Strengthening the property/ownership framing deepens reification (token as possessable thing) at exactly the moment unit-of-account integrity should be pushing the other direction (token as index of productive trust). Read together, the three moves are not three coincidences; they are a consistent semiotic drift — and the semiotic level is the third site of invisibilization. The amendment that the assessment reads as procedural housekeeping also performed a quiet, coordinated re-grounding of the constitution's account of money and rights onto ownership. That is the most rights-relevant thing v2.4 did, and it did it in three places at once.
+My Trajectory Assessment treated the terminology change as "primarily symbolic" with "no significant operational governance effects." Structurally, that is correct. **Ontologically, the pattern is not neutral, and it points the wrong way.** Strengthening the property/ownership framing deepens reification (token as possessable thing) at exactly the moment unit-of-account integrity should be pushing the other direction (token as index of productive trust). Read together, the three moves are not three coincidences; they are a consistent semiotic drift — and the semiotic level is the third site of invisibilization. The amendment that the assessment reads as procedural housekeeping also performed a quiet, coordinated re-grounding of the constitution's account of money and rights onto ownership. That is the most rights-relevant thing v2.4 did, and it did it in three places at once.
 
 Offered as an earned amendment to the assessment: the terminology change is symbolic *and* directionally significant, because it is one of three aligned moves, not a lone one. Its operational effects are nil; its ontological effects run against the rights trajectory.
 
@@ -214,13 +212,13 @@ Offered as an earned amendment to the assessment: the terminology change is symb
 
 ## What the map supports — an honest scorecard
 
-- **Gesture toward rights — strongly supported.** Not as interpretation but as stated intent, three times over: IOG's title and method, the Preamble's promise, your own contemporaneous reading. The Tenets were placed in the rights slot and accepted on credit.
+- **Gesture toward rights — strongly supported.** Not as interpretation but as stated intent, three times over: IOG's title and method, the Preamble's promise, my own contemporaneous reading. The Tenets were placed in the rights slot and accepted on credit.
 
 - **Indicative of rights — supported, with one documented hole.** Eight of the ten Tenets trace cleanly to a derived right (§1.3), which is the evidence for the claim. The *shape* of the coverage independently confirms the verification-gap thesis: dense on the transaction layer, thin on the governance layer. And the thinness is not just underdevelopment — IOG's verifiability/anti-asymmetry tenet (T11), which named informational integrity almost directly, was dropped at constitutionalization (§1.5). The Tenets are evidence for the derivation both in what they reach toward and in the one place a reaching tenet was removed.
 
 - **Lead to rights — supported as design intent; contradicted, now more sharply, as realized trajectory.** This is the finding that matters most for orientation. The Tenets were installed as a mechanism *meant* to develop into rights (the conditional debt is the proof of intent). But the mechanism is not operating, and v2.4 did three things against it at once: it reduced the developmental capacity payment requires (the five-vector drift), it left the rights debt unpaid, and — the upgrade this revision adds — it actively *inserted* the reification error into T10 that the debt's payment must later correct (§1.4). "Lead to" is true of the blueprint and false of the current motion. The system was not merely failing to walk toward rights; on the monetary question it took a step backward. **The divergence between the intended trajectory and the actual one is the lay of the land.**
 
-One tension to keep open rather than resolve: there is a genuine defender's case that Tenets-as-criteria was the correct temperate choice, that premature enumeration risks ossification and a scramble of ad-hoc claims on public goods (a risk your own rationale named), and that v2.4's enforceability gains are real. The map does not refute that case. It relocates it: even granting every enforceability gain, the *developmental* account of the constitution — the one that justified accepting Tenets on credit — is the account v2.4 weakens. Whether that proves harmful is, as the assessment holds, an empirical question answered by disciplined observation. The map's job is to make the stakes legible, not to close them.
+One tension to keep open rather than resolve: there is a genuine defender's case that Tenets-as-criteria was the correct temperate choice, that premature enumeration risks ossification and a scramble of ad-hoc claims on public goods (a risk my own rationale named), and that v2.4's enforceability gains are real. The map does not refute that case. It relocates it: even granting every enforceability gain, the *developmental* account of the constitution — the one that justified accepting Tenets on credit — is the account v2.4 weakens. Whether that proves harmful is, as the assessment holds, an empirical question answered by disciplined observation. The map's job is to make the stakes legible, not to close them.
 
 ---
 
@@ -241,7 +239,6 @@ Kept in this register — fitness gaps and trajectory, not accusations — the p
 
 The two structural open threads from draft 1.0 are now closed (§2.4 consolidation confirmed; the T10 reification error confirmed as a v2.4 insertion, not an IOG inheritance). What remains:
 
-- **Pin the moment of the T10 insertion within the v2.4 process.** It is confirmed as a v2.4-era change (absent in v1.0 and IOG). The remaining question is whether the "store of value" clause entered through one of the bundled amendments the Trajectory Assessment reviewed, or rode in unremarked alongside them. The assessment's bundling critique (Claim 0) predicts exactly this failure mode — a substantive change made hard to attribute by being packaged with others. Worth tracing to the specific governance action, both to firm the record and as a live illustration of the bundling harm.
-- **Decide whether to formally amend the Trajectory Assessment.** Two findings sit outside its current scope: the T10 ontology insertion (it saw only "holder → owner") and the document-architecture compression (it tracked compression at the action level, not the article level). Both are consistent with its method; they are gaps in coverage, not errors. A short addendum, or a v1.1 of the assessment, would close them.
+- **Pin the moment of the T10 insertion within the v2.4 process.** It is confirmed as a v2.4-era change (absent in v1.0 and IOG). The remaining question is whether the "store of value" clause entered through one of the bundled amendments the Trajectory Assessment reviewed, or rode in unremarked alongside them. The assessment's bundling critique (Claim 0) predicts exactly this failure mode — a substantive change made hard to attribute by being packaged with others. 
 - **Decide whether "participation rights" should be renamed** in rights-derivation-facing material, to stop the term from colonizing the slot the protective rights need. (Candidate: "franchise entitlements" for the Article II procedural set; "participant rights" reserved for the derived, protective set.)
-- **Consider reclaiming the dropped IOG verifiability tenet (T11) as a named ancestor of the framework.** It is the closest thing in the official lineage to a stated informational-integrity / anti-asymmetry right, and it was on the table before being left off the page. As provenance for the verification-gap work, "the constitution's own source named verifiability as a user right and then dropped it" is a stronger and more sympathetic entry point than introducing the concern from outside.
+- **Consider reclaiming the dropped IOG verifiability tenet (T11) as a named ancestor of the framework.** It is the closest thing in the official lineage to a stated informational-integrity / anti-asymmetry right, and it was on the table before being left off the page. 
