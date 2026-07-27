@@ -15,7 +15,7 @@ related: [The_Transaction_as_Constitutional_Moment.md]
 
 # The Verification Gap
 
-## The layer you already trust
+## The layer we already trust
 
 Start with the thing that works.
 
@@ -57,7 +57,7 @@ Every transaction is two events at once. As a **consensus event**, the chain pro
 
 The asymmetry is the whole point. The protocol-conformance of the transaction is proven. The continued authentic authorization of the terms it consents to is proven by *nothing*. The lit half and the unlit half sit inside the same object. (What "authentic authorization" requires — the conditions under which that consent stays genuine rather than formal — is the work of the rights derivation; this node only locates the gap.)
 
-## Why you can't close it with more of the same
+## Why we can't close it with more of the same
 
 The reflex is to add a proof. You can't — not the same kind.
 
@@ -75,7 +75,7 @@ A claim this load-bearing should name its own attack surface.
 
 **It is not a problem the ecosystem grows out of. It gets worse with success.** Part of what makes the consent genuine is that real alternatives exist — you could coordinate elsewhere. The more indispensable the commons becomes, the thinner that gets, and the more the consent risks going formal while looking fully intact: still transacting, still paying, still appearing to agree, under alternatives that have quietly closed. Success erodes the very invariant, silently, while every growth metric climbs green. That is precisely why the instrument has to be *standing and continuous* rather than a one-time audit — it is reading a signal that decays in the dark.
 
-## Where this leaves you
+## Where this leaves us
 
 The consensus layer gave the ecosystem something no prior settlement system had: a transaction that proves its own correctness, with no trusted third party to ask. The unfinished half of the same achievement sits one layer up — a governance action that could show its own *legitimacy*, not merely its procedure.
 
