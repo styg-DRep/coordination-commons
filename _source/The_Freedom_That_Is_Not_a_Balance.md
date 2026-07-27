@@ -6,7 +6,7 @@ layer: 3
 status: CANDIDATE
 companion_to: The Good That Is Not a Quantity
 source: >
-  Working conversation, agent-layer aside to the treasury-proposal analysis. Continues the diagnostic in
+  Continues the diagnostic in
   The Good That Is Not a Quantity, re-indexed from the institution to the individual holder.
 diagnoses: [freedom/wealth conflation, purchased latitude as enclosure-in-first-person, exit as disclosure, greater-fool hollowing]
 edges:
