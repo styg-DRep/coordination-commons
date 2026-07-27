@@ -280,10 +280,10 @@ MANIFEST = [
         "strip_meta_table": True, "demote": True,
         "vote": {
             "verdict": "NO",
-            "gaid": "[to be filled]",
+            "gaid": "gov_action1jxne7hynfd7frcczwumd2eggps4kvy0msjztz9t0mutpy870ksgqqp6vp3p",
             "ga_type": "Update to Constitution",
-            "submitted": "[to be filled]",
-            "expires": "[to be filled]",
+            "submitted": "Epoch 601 (Dec 15, 2025)",
+            "expires": "Epoch 608 (Jan 19, 2026)",
         },
         "card": "Recorded late and on purpose. The vote that revealed YES/NO as the wrong instrument for "
                 "the constitutional problem that mattered most — and the ontological drift that prompted "
@@ -907,7 +907,7 @@ def build_index():
   <section class="hero">
     <h1>The Coordination Commons</h1>
     <p class="lede">The public reference behind my votes as a Cardano DRep. Everything I assert in a
-    rationale is derived somewhere on these pages — so if you disagree with a vote of mine, you can go
+    rationale is derived somewhere on these pages, so if you disagree with a vote of mine, you can go
     to the place the disagreement actually starts, and argue with that instead.</p>
     <p class="sig">{esc(SITE['author'])} · <a href="https://x.com/{esc(SITE['handle'])}" rel="me noopener">@{esc(SITE['handle'])}</a>{f" · DRep <code>{esc(SITE['drep_id'])}</code>" if SITE['drep_id'] else ""}</p>
   </section>
@@ -915,20 +915,20 @@ def build_index():
   <section class="claim">
     <p>Cardano is an open-source, peer-to-peer, decentralized blockchain built to enable
     self-determination through participatory constitution of a coordination commons.</p>
-    <p class="attrib">The claim everything here unpacks — stated in full, with what would falsify it, on
+    <p class="attrib">The claim everything here unpacks, stated in full, with what would falsify it, on
     <a href="foundations/what-cardano-is/">What Cardano Is</a>.</p>
   </section>
 
   <div class="narrow" style="margin-inline:0">
     <h2 style="margin-top:0">Why this site exists</h2>
     <p>A vote is a compression. On-chain, a rationale gets a few thousand characters to carry reasoning
-    that took months to build, and the parts that do the real work — what money is for, what a holder
-    actually is, which rights follow and how — get squeezed into assertions that read like preferences.</p>
+    that took months to build, and the parts that do the real work (what money is for, what a holder
+    actually is, which rights follow and how) get squeezed into assertions that read like preferences.</p>
     <p>So the reasoning lives here instead, at full length, at stable addresses. A rationale can then do
     the thing a rationale should do: state a verdict, show the working specific to <em>this</em> action,
     and link out to the derivation rather than smuggling it in.</p>
     <p>Two commitments govern everything below. First, the rights argued for here are treated as
-    <em>discovered</em> rather than decreed — which means the whole structure is exposed to being shown
+    <em>discovered</em> rather than decreed, which means the whole structure is exposed to being shown
     wrong, and the conditions that would show it are published rather than implied. Second, the single
     place where this argument crosses from description to prescription is marked and held in one page,
     not distributed invisibly through the rest.</p>
@@ -955,7 +955,7 @@ def build_index():
 """
     write(["index.html"], shell(
         title=SITE["title"],
-        description="The public reference corpus behind the Cardano DRep votes of Jeremy Bolander — "
+        description="The public reference corpus behind the Cardano DRep votes of Styg — "
                     "money ontology, rights derivation, the marked seam, and the voting instruments.",
         body=body, depth=depth, canonical=""))
 
@@ -1040,7 +1040,7 @@ def build_about():
       mattered. Theory here is not rewritten in advance of evidence; lived usage is the mechanism by
       which the corpus updates.</p>
       <p>That creates a tension I would rather name than manage quietly: the more my votes depend on
-      this corpus for their legitimacy, the more expensive it becomes to revise — which cuts directly
+      this corpus for their legitimacy, the more expensive it becomes to revise, which cuts directly
       against the commitment that none of it is exempt from change. The structural response is the seam,
       below.</p>
 
@@ -1050,7 +1050,7 @@ def build_about():
         <p>This argument crosses once, from <em>what this chain is</em> to <em>what its governance owes</em>.
         I do not claim that crossing is a deduction. I claim it is a single, visible, auditable seam,
         stated openly so it can be inspected and contested rather than distributed invisibly through the
-        argument where it cannot be found. A framework with one marked joint has not achieved
+        argument where it cannot be found. A framework with one marked joint has not confused itself with
         universality. It is a framework you can audit.</p>
         <p>Pages that inherit the crossing say so, and point here:
         <a href="{r}seam/legibility/">The Legibility of the Seam</a> ·
