@@ -73,4 +73,4 @@ Which means this isn't a doctrine to adopt. It's an instrument to build, calibra
 
 The first piece said there's a second sensor to build. This one says what it reads, and how the reading is found rather than decreed. What's still open — gloriously, usefully open — is the calibration: how sensitive, how often, read by whom, with what consequence when it trips. That's not a footnote to the work. That's the work.
 
-Come argue with me about the calibration.
+And the work continues.
