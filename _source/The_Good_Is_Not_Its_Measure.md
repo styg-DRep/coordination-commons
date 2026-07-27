@@ -9,7 +9,7 @@ note: >
   explicit promotion decision by the author. Presented as shape + evidence, not yet as hub.
 parent_of: [The Good That Is Not a Quantity, The Freedom That Is Not a Balance]
 source: >
-  Abstraction over two instance-notes developed in the treasury-proposal conversation: the institution
+  Abstraction over two instance-notes: the institution
   locus (treasury security re-specified as balance) and the agent locus (freedom re-specified as wealth).
 diagnoses: [quantity substitution as scale-free move; scale-dependence of the correction]
 edges:
@@ -92,4 +92,4 @@ Both loci pass, with corroboration from two directions the original instances co
 
 Two honesty-notes are logged rather than smoothed over. First, the platform sub-locus *strained* the fidelity-to-purpose ought and is what forced the three-position gate; the schema held only after being refined, which is a real edit, not a clean pass. Second, every instance so far is a proxy-for-a-relation in a coordination-adjacent domain; a genuinely distant locus — biological, or purely private and non-social — is the harder test, and would be required before claiming the move beyond commons contexts.
 
-Status is left at **CANDIDATE**: the test supports promotion, but the promotion decision itself is deferred to the author rather than taken here.
+Status is left at **CANDIDATE**: the test supports promotion, but the promotion decision itself is deferred rather than taken here.
