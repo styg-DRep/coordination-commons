@@ -128,7 +128,7 @@ I expect parts of this to re-version. The money ontology in particular will be t
 
 This page is the short form. The full derivation — the money ontology, the blockchain primer, the field-fitness audit, the rights articulation, and the archive of the work toward holder rights — lives at the linked site. Nothing here is asserted that is not derived there, and everything there is open to the four challenges above.
 
-Come argue with me.
+And the work continues.
 
 ---
 
