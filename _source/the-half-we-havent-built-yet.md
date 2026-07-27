@@ -49,4 +49,4 @@ So this is an invitation, not a verdict. If you're a builder, the sharpest thing
 
 The first half of this achievement was a transaction that proves its own correctness, with no one to trust. The second half is a governance action that could show its own *legitimacy*, not merely its procedure. It doesn't exist yet. Building it is the open work — and it's the same instinct that built reflexivity in the first place, carried to the layer where reflexivity falls silent.
 
-The door's open. Come argue with me about what's on the other side.
+And the work continues.
