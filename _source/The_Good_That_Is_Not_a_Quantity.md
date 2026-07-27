@@ -6,7 +6,7 @@ layer: 3
 status: CANDIDATE
 audience: [DReps, Constitutional Committee, treasury administration, governance working groups, proposal reviewers]
 source: >
-  Working conversation on two prospective governance proposals (treasury investment for "net positive"
+  Working notes on two prospective governance proposals (treasury investment for "net positive"
   return; commons-level debt issuance). Anchored in Cardano Constitution v1.0 (Article IV; Treasury
   Withdrawal Guardrails TREASURY-01a–04a; Article IV §5 auto-abstain) and the delegate-endorsed
   constitution voting rationale (the passage naming the treasury's *security* — not the treasury — as
