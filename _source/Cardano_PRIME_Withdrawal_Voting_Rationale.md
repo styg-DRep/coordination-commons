@@ -2,11 +2,11 @@
 
 | Governance Voting Rationale |  |
 | ----- | :---- |
-| GAID | *[Cardano PRIME GAID — to be filled]* |
+| GAID | gov_action122wue2k65qq8gmpz795z2axt8apka6ay6xt3pwg8jxj5yfkujmtsqvlfpu7 |
 | Title | Cardano PRIME — Treasury Withdrawal of ₳120,000,000 (AlphaGrowth) |
 | Type of GA | Treasury Withdrawals |
-| Date submitted | *[epoch / date — to be filled]* |
-| Expiration Date | *[epoch / date — to be filled]* |
+| Date submitted | Epoch 642 (Jul 9, 2026) |
+| Expiration Date | Epoch 649 (Aug 12, 2026) |
 
 # Contents
 
@@ -81,16 +81,14 @@ Thank you for reading this rationale and for supporting it with your delegation.
 
 The following background may help a reader new to this DRep's approach. Each is linked once, at first relevance:
 
-- *The evaluation framework* — this DRep's standing method of judging governance actions by their long-run trajectory rather than by a single snapshot, first set out in the rationale on the Cardano Constitution. *[link]*
-- *The claim a for-profit makes on the shared treasury* — the distinction between maintaining a non-rival, forkable good the ecosystem depends on and funding projected growth for a private return. *[link]*
-- *The DRep Treasury Rule Book* — the capital-stewardship instrument, maintained by a peer DRep, used here as the independent fiduciary check. *[link]*
-- *Companion rationale* — the Net Change Limit Increase, the other half of this pair. *[link]*
+- *The evaluation framework* — this DRep's standing method of judging governance actions by their long-run trajectory rather than by a single snapshot, first set out in the rationale on the Cardano Constitution. [Coordination Commons](https://styg-drep.github.io/coordination-commons/)
+- *The claim a for-profit makes on the shared treasury* — the distinction between maintaining a non-rival, forkable good the ecosystem depends on and funding projected growth for a private return. [Private-Surplus Burden](https://styg-drep.github.io/coordination-commons/instruments/abstention-spines/#appendix-a-the-private-surplus-burden-as-published)
+- *The DRep Treasury Rule Book* — the capital-stewardship instrument, maintained by a peer DRep, used here as the independent fiduciary check. [DRep Treasury Rule Book v17](https://docs.google.com/document/d/1ed-IkSj4tDqys3D1jDMspgIZ7O9xSmxQsMPpB_b3DXA/edit?usp=sharing)
+- *Companion rationale* — the Net Change Limit Increase, the other half of this pair. [NCL](https://aqua-casual-quelea-615.mypinata.cloud/ipfs/bafybeiafguondl625epf46fuvlqf6owo6vzdcgaptonumg6ql5jyhsdvca)
 
-DRep ID: drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw
-DRep Profile (tempo): https://tempo.vote/drep-profile?dRepId=drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw
+DRep ID: drep1yfaq8dsam7nusdccey2x2p684f6ulhr42pv24tslv0terqs3nq50q
 
 Stay in touch!
-ReachYourPeople: https://www.ryp.io/projects/45
 X: https://x.com/styg50
 
 ---
