@@ -2,11 +2,11 @@
 
 | Governance Voting Rationale |  |
 | ----- | :---- |
-| GAID | *[Scalus 2026 GAID — to be filled]* |
+| GAID | gov_action1xg69v73lfzkwyhhuz583x6geyc2ewn3r96sxuqj3wqvrrk0yfpksqqa63yc |
 | Title | Scalus 2026: Maintenance, Dijkstra Readiness, Interoperability & Application Runtime (Lantr Engineering) |
 | Type of GA | Treasury Withdrawals |
-| Date submitted | *[epoch / date — to be filled]* |
-| Expiration Date | *[epoch / date — to be filled]* |
+| Date submitted | Epoch 640 (Jun 29, 2026) |
+| Expiration Date | Epoch 647 (Aug 2, 2026) |
 
 # Contents
 
@@ -73,21 +73,19 @@ We vote **YES**. Scalus is public infrastructure the ecosystem already relies on
 
 The framework's work here was not to find fault but to confirm that the burden is discharged and the risk surface is genuinely shallow, and to say so without manufacturing scrutiny the action does not warrant. The one thing carried forward is a matter for future cycles rather than this vote: to re-read, as the runtime grows and the funding recurs, whether the ecosystem's exit from this dependency stays as open as the code's licence currently keeps it.
 
-Thank you for reading this rationale and for supporting it with your delegation.
+Thank you for reading this rationale and for supporting it with your delegation. And the work continues...
 
 # References / Sources {#references-sources}
 
-The following background may help a reader new to this DRep's approach. Each is linked once, at first relevance:
+The following background may help a reader new to this DRep's approach:
 
-- *The evaluation framework* — this DRep's standing method of judging governance actions by their long-run trajectory and their risk of failing unseen, rather than by a single snapshot, first set out in the rationale on the Cardano Constitution. *[link]*
-- *The claim a for-profit makes on the shared treasury* — the published test distinguishing the maintenance of a non-rival, forkable good the ecosystem depends on from the funding of a private surplus. *[link]*
-- *The DRep Treasury Rule Book* — the capital-stewardship instrument, maintained by a peer DRep, used here as the allocation check. *[link]*
+- *The evaluation framework* — this DRep's standing method of judging governance actions by their long-run trajectory and their risk of failing unseen, rather than by a single snapshot, first set out in the rationale on the Cardano Constitution. [Coordination Commons](https://styg-drep.github.io/coordination-commons/)
+- *The claim a for-profit makes on the shared treasury* — the published test distinguishing the maintenance of a non-rival, forkable good the ecosystem depends on from the funding of a private surplus. [Private-Surplus Burden](https://styg-drep.github.io/coordination-commons/instruments/abstention-spines/#appendix-a-the-private-surplus-burden-as-published)
+- *The DRep Treasury Rule Book* — the capital-stewardship instrument, maintained by a peer DRep, used here as the allocation check. [DREP Treasury Rulebook v17](https://docs.google.com/document/d/1ed-IkSj4tDqys3D1jDMspgIZ7O9xSmxQsMPpB_b3DXA/edit?tab=t.0)
 
-DRep ID: drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw
-DRep Profile (tempo): https://tempo.vote/drep-profile?dRepId=drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw
+DRep ID: drep1yfaq8dsam7nusdccey2x2p684f6ulhr42pv24tslv0terqs3nq50q
 
 Stay in touch!
-ReachYourPeople: https://www.ryp.io/projects/45
 X: https://x.com/styg50
 
 ---
