@@ -87,7 +87,7 @@ The following background may help a reader new to this DRep's approach. Each is 
 - *The 2.4 amendment rationale* — where this DRep first flagged the risk that the net-change limit could drift from mandate toward formality. [Rationale](https://styg-drep.github.io/coordination-commons/rationales/constitution-v2-4/)
 - *Companion rationale* — the Cardano PRIME Treasury Withdrawal, the other half of this pair. [Cardano PRIME](https://aqua-casual-quelea-615.mypinata.cloud/ipfs/bafybeihbe7fwiidksojosa5djd3dahvsupzjt45ygtxwcr75e5pdhmkfgi)
 
-DRep ID: drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw
+DRep ID: drep1yfaq8dsam7nusdccey2x2p684f6ulhr42pv24tslv0terqs3nq50q
 
 Stay in touch!
 X: https://x.com/styg50
