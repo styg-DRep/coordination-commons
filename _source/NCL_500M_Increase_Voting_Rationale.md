@@ -2,11 +2,11 @@
 
 | Governance Voting Rationale |  |
 | ----- | :---- |
-| GAID | *[NCL-increase GAID — to be filled]* |
+| GAID | gov_action15atytcy8ru7mkcs8m7r8mx7k5x36t0h6grtgmak6v5wmf4nq07lsqhakceq |
 | Title | Agreement of a New Net Change Limit of 500,000,000 ada for Epochs 613–713 |
 | Type of GA | Info action (Net Change Limit agreement, TREASURY-01a) |
-| Date submitted | *[epoch / date — to be filled]* |
-| Expiration Date | *[epoch / date — to be filled]* |
+| Date submitted | Epoch 640 (Jul 2, 2026) |
+| Expiration Date | Epoch 647 (Aug 2, 2026) |
 
 # Contents
 
@@ -77,22 +77,19 @@ We vote **NO**. A ceiling redrawn to fit a spend that is already being decided i
 
 The resubmission that answers both is straightforward to describe: set the net-change limit prospectively, size it to modeled need for the period, and scope it so that any future increase answers a forecast rather than a particular withdrawal waiting on the other side of the vote. Done that way, a ceiling increase is ordinary fiscal stewardship, and this DRep would treat it as such.
 
-Thank you for reading this rationale and for supporting it with your delegation.
+Thank you for reading this rationale and for supporting it with your delegation.  And the work continues...
 
 # References / Sources {#references-sources}
 
 The following background may help a reader new to this DRep's approach. Each is linked once, at first relevance:
 
-- *The evaluation framework* — this DRep's standing method of judging governance actions by their long-run trajectory rather than by a single snapshot, first set out in the rationale on the Cardano Constitution. *[link]*
-- *The 2.4 amendment rationale* — where this DRep first flagged the risk that the net-change limit could drift from mandate toward formality. *[link]*
-- *The treasury as a shared commons, and what participants can expect of governance that holds it in trust.* *[link]*
-- *Companion rationale* — the Cardano PRIME Treasury Withdrawal, the other half of this pair. *[link]*
+- *The evaluation framework* — this DRep's standing method of judging governance actions by their long-run trajectory rather than by a single snapshot, first set out in the rationale on the Cardano Constitution. [Coordination Commons](https://styg-drep.github.io/coordination-commons/)
+- *The 2.4 amendment rationale* — where this DRep first flagged the risk that the net-change limit could drift from mandate toward formality. [Rationale](https://styg-drep.github.io/coordination-commons/rationales/constitution-v2-4/)
+- *Companion rationale* — the Cardano PRIME Treasury Withdrawal, the other half of this pair. [Cardano PRIME](https://aqua-casual-quelea-615.mypinata.cloud/ipfs/bafybeihbe7fwiidksojosa5djd3dahvsupzjt45ygtxwcr75e5pdhmkfgi)
 
 DRep ID: drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw
-DRep Profile (tempo): https://tempo.vote/drep-profile?dRepId=drep1y239dn6nzlrlua9ku2d0jr4j3l6f344shcmjljtpt9mu6ps4u76rw
 
 Stay in touch!
-ReachYourPeople: https://www.ryp.io/projects/45
 X: https://x.com/styg50
 
 ---
