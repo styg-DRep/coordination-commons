@@ -69,7 +69,7 @@ FUNNELS = [
                  "abstention is the honest instrument rather than a dodge.",
         "lede": "Theory that never touches a ballot is not a governance practice. These are the instruments "
                 "that convert the derivation into decisions — a sort that decides how much analysis an action "
-                "earns, a diagnostic that reads whether the field can still sense its own damage, and the "
+                "earns, a diagnostic that asks whether the field is honoring the participants it exists to serve, and the "
                 "discipline that governs what each vote token is actually claiming.",
     },
     {
@@ -208,7 +208,7 @@ MANIFEST = [
     },
     # ---------------------------------------------------------- instruments
     {
-        "slug": "field-fitness-audit", "funnel": "instruments", "src": "field-fitness-audit.md",
+        "slug": "The Constitutional Rights Audit", "funnel": "instruments", "src": "The Constitutional Rights Audit (v1.2).md",
         "kicker": "Instrument · Layer 3 · The diagnostic",
         "card": "The four failures, run in order, with the six rights as the integrity sensor. Framed as "
                 "fitness gaps rather than accusations, designed to be run jointly and re-run over time.",
