@@ -208,10 +208,9 @@ MANIFEST = [
     },
     # ---------------------------------------------------------- instruments
     {
-        "slug": "The Constitutional Rights Audit", "funnel": "instruments", "src": "The Constitutional Rights Audit (v1.2).md",
+        "slug": "Finishing Verifiable Reflexivity", "funnel": "instruments", "src": "finishing-verifiable-reflexivity.md",
         "kicker": "Instrument · Layer 3 · The diagnostic",
-        "card": "The four failures, run in order, with the six rights as the integrity sensor. Framed as "
-                "fitness gaps rather than accusations, designed to be run jointly and re-run over time.",
+        "card": "The engine the ecosystem built to abolish trusted third parties stops at the transaction layer — by its nature, not by oversight. This is about the layer it can't see, the debt the ecosystem already named there, and a way to begin paying it down together.",
         "edges_extra": [
             ("derives_from", "The Rights of Participants", "foundations/rights"),
             ("continues_from", "The Verification Gap", "seam/verification-gap"),
@@ -223,6 +222,11 @@ MANIFEST = [
         "kicker": "Instrument · Layer 3 · The ingestion layer",
         "card": "Three axes decide how much analysis a governance action earns: wall-versus-knob, "
                 "exit-remediability, and epistemic-dependency depth. On-chain action type is not one of them.",
+    },
+    {
+        "slug": "Constitutional Rights Audit", "funnel": "instruments", "src": "constitutional-rights-audit.md",
+        "kicker": "Instrument · Layer 3 · The Sensor",
+        "card": "The constitutional sensor — the six-rights battery and the reciprocity axis, assembled as one runnable instrument",
     },
     {
         "slug": "abstention-spines", "funnel": "instruments", "src": "abstention-spines.md",
